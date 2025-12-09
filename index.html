@@ -1,381 +1,1478 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ===== Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Document</title>
-</head>
+body {
+    background: #fafafa;
+}
 
-<body>
+.navbar {
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
 
-    
-    
-    <!-- HERO SECTION -->
-    
+.search-icon {
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
 
-    <section class="about-section">
-        <div class="image-section">
-            <img src="https://selvamsubbiah.com/wp-content/uploads/2021/11/download.png"
-                alt="cricket-image">
-        </div>
-        <div class="c2-section">
-            <div class="ana-card">
-                <div class="icon-sec">
-                    <i class="fas fa-baseball-ball"></i>
-                </div>
-                <div class="anaylis-name">
-                    <p>Ball speed</p>
-                     <h5>63.7 km/h</h5>
-                </div>
-            </div>
-            <div class="ana-card">
-                <div class="icon-sec">
-                    <i class="fas fa-running"></i>
-                </div>
-                <div class="anaylis-name">
-                    <p>Run Up speed</p>
-                    <h5>10.5 km/h</h5>
-                </div>
-            </div>
-            <div class="ana-card">
-                <div class="icon-sec">
-                    <i class="fas fa-shoe-prints"></i>
-                </div>
-                <div class="anaylis-name">
-                    <p>Foot Distance</p>
-                    <h5>93.8 cm</h5>
-                </div>
-            </div>
-            <div class="ana-card">
-                <div class="icon-sec">
-                    <i class="fas fa-angle-up"></i>
-                </div>
-                <div class="anaylis-name">
-                    <p>Ball slope</p>
-                    <h5>5.4</h5>
-                </div>
-            </div>
-        </div>
-        <div class="what-section">
-            <p class="wel-t">
-                WELCOME BREAKERS
-            </p>
-            <h3 class="what-is-matcha">
-                What is <span>Matcha?</span>
-            </h3>
-            <p class="matcha-para">
-                Matcha is a cricket scoring and analysis application that helps
-                tournaments and players measure performance with real-time data,
-                score updates and live match analytics.
-            </p>
-            <button class="btn">
-                VIEW MORE
-            </button>
-        </div>
+.logo {
+    position: absolute;
+    left: 40px;
+}
 
-    </section>
+.menu {
+    display: flex;
+    gap: 30px;
+}
 
-    <section class="why-section">
+/* ============ HOVER EFFECT ADDED HERE ============ */
+.menu a {
+    text-decoration: none;
+    font-family: "Montserrat";
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 10px 15px;
+    overflow: hidden;
+    display: inline-block;
+}
 
-        <div class="why-match">
-            <p class="wel-t">WELCOME BREAKERS</p>
-            
-            <h3 class="why-title">
-                WHY CHOOSE <span>MATCHA?</span>
-            </h3>
-        </div>
-    
-        <div class="why-left">
-            <p class="why-para">
-                Matcha is the first-of-its-kind social platform built exclusively for the cricketing
-                community. Whether you're a player, coach, scout, or fan, Matcha brings everyone
-                together to connect, compete, and grow.
-            </p>
-    
-            <ul class="why-list">
-                <li>Showcase Your Cricket Journey</li>
-                <li>Find Players & Teams</li>
-                <li>Join Tournaments & Matches</li>
-                <li>Engage with the Community</li>
-                <li>Get Noticed by Scouts</li>
-            </ul>
-    
-            <button class="btn why-btn">VIEW MORE</button>
-        </div>
-    
-        <div class="why-right">
-            <div class="image-wrapper">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5SwzVJZ58CPZVRJ8TC3VTrEbG6WB08pS2jg&s"
-                    alt="player">
-    
-                <!-- floating cards -->
-                <div class="float-card top-card">
-                    <p class="fc-title">BALL SPEED</p>
-                    <div class="fc-values">
-                        <span class="small">UP:</span> 62.37
-                        <span class="small">BK:</span> 56.24
-                        <h4>62.37</h4>
-                    </div>
-                    <span class="badge green">ACCURATE</span>
-                </div>
-    
-                <div class="float-card bottom-card">
-                    <p class="fc-title">BALL SPEED</p>
-                    <div class="fc-values">
-                        <span class="small">UP:</span> 62.37
-                        <span class="small">BK:</span> 56.24
-                        <h4>62.37</h4>
-                    </div>
-                    <span class="badge green">ACCURATE</span>
-                </div>
-            </div>
-        </div>
-    
-    </section>
+.menu a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#c9f3e9, #e9fff6);
+    transition: 0.3s ease;
+    z-index: -1;
+}
 
-    <section class="newsletter-section">
-    
-        <div class="news-top">
-            <div class="news-left">
-                <i class="icon-news"></i>
-                <p>GET NEWSLETTER & DISCOUNT</p>
-            </div>
-            <div class="line"></div>
-        </div>
-    
-        <div class="subscribe-box">
-            <button class="sub-btn">Subscribe</button>
-        </div>
-    
-    </section>
+.menu a:hover::before {
+    top: 0;
+}
 
-    <section class="fifth-section">
-        <div class="left-content">
-            <h4>KEY FEATURES</h4>
-            <h2>PLAYER PROFILES &<br>CRICKET RESUMES</h2>
-    
-            <ul>
-                <li>Create a detailed cricket profile with stats, achievements, and videos.</li>
-                <li>Showcase your skills to scouts, teams, and coaches.</li>
-                <li>Get discovered for club and professional cricket opportunities.</li>
-            </ul>
-        </div>
-    
-        <div class="middle-image">
-            <img src="/assest/profileimage.jpg" alt="Profile Card">
-        </div>
-    
-        <div class="right-image">
-            <img src="/assest/postImage.jpg" alt="Cricket Image">
-        </div>
-    </section>
+.menu a:hover {
+    color: #000;
+}
 
-    <section class="sixth-section">
-        <div class="six-sec">
-            <div class="six-left">
-                <h5>OUR FEATURES</h5>
-                <h2>
-                    PERFORMANCE<br>
-                    ANALYTICS &<br>
-                    STATS TRACKING
-                </h2>
-            </div>
-            
-            <div class="six-right">
-                <div class="right-item">
-                    <p>TRACK YOUR MATCH PERFORMANCES WITH DETAILED ANALYTICS.</p>
-                    <hr>
-                </div>
-            
-                <div class="right-item">
-                    <p>GET INSIGHTS ON AREAS OF IMPROVEMENT.</p>
-                    <hr>
-                </div>
-            
-                <div class="right-item">
-                    <p>COMPARE YOUR STATS WITH PEERS AND PROFESSIONALS.</p>
-                    <hr>
-                </div>
-<!--             
-                <img src="/assest//analysis.jpg" class="circle-img" alt="Analytics UI"> -->
-            </div>
-        </div>
-    </section>
+/* ================================================== */
 
-    <section class="seventh-section">
-        <div class="sev-container">
-    
-            <!-- LEFT TEXT -->
-            <div class="sev-left">
-                <h5>OUR MISSION & VISION</h5>
-                <h2>FOR A GREAT<br>EXPERIENCE</h2>
-            </div>
-    
-            <!-- RIGHT ITEMS -->
-            <div class="sev-right">
-    
-                <!-- Talent Growth -->
-                <div class="sev-item">
-                    <div class="icon-box">
-                        <!-- Trophy Icon -->
-                        <svg width="40" height="40" viewBox="0 0 24 24" stroke="#000" fill="none" stroke-width="1.5">
-                            <path d="M8 4v2a4 4 0 0 0 8 0V4" />
-                            <path d="M6 4H4v2a4 4 0 0 0 4 4" />
-                            <path d="M18 4h2v2a4 4 0 0 1-4 4" />
-                            <path d="M12 14v7" />
-                            <path d="M8 21h8" />
-                        </svg>
-                    </div>
-    
-                    <div>
-                        <h3>TALENT GROWTH</h3>
-                        <p>Empowering cricketers with visibility & opportunities.</p>
-                    </div>
-                </div>
-    
-                <!-- Cricket Connect -->
-                <div class="sev-item">
-                    <div class="icon-box">
-                        <!-- Cricket Stumps Icon -->
-                        <svg width="40" height="40" viewBox="0 0 24 24" stroke="#000" fill="none" stroke-width="1.5">
-                            <path d="M8 3v18" />
-                            <path d="M12 3v18" />
-                            <path d="M16 3v18" />
-                        </svg>
-                    </div>
-    
-                    <div>
-                        <h3>CRICKET CONNECT</h3>
-                        <p>Bringing players, coaches & fans together.</p>
-                    </div>
-                </div>
-    
-                <!-- Game Insights -->
-                <div class="sev-item">
-                    <div class="icon-box">
-                        <!-- Glasses Icon -->
-                        <svg width="40" height="40" viewBox="0 0 24 24" stroke="#000" fill="none" stroke-width="1.5">
-                            <path d="M3 13a4 4 0 0 1 8 0v2a4 4 0 0 1-8 0v-2z" />
-                            <path d="M13 13a4 4 0 0 1 8 0v2a4 4 0 0 1-8 0v-2z" />
-                            <path d="M11 13h2" />
-                        </svg>
-                    </div>
-    
-                    <div>
-                        <h3>GAME INSIGHTS</h3>
-                        <p>Enhancing skills through shared knowledge & analytics.</p>
-                    </div>
-                </div>
-    
-                <!-- Stronger Community -->
-                <div class="sev-item">
-                    <div class="icon-box">
-                        <!-- Mountain Icon -->
-                        <svg width="40" height="40" viewBox="0 0 24 24" stroke="#000" fill="none" stroke-width="1.5">
-                            <path d="M3 21l7-12 7 12H3z" />
-                            <path d="M10 13l2-3 2 3" />
-                        </svg>
-                    </div>
-    
-                    <div>
-                        <h3>STRONGER COMMUNITY</h3>
-                        <p>Uniting cricket lovers worldwide seamlessly.</p>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </section>
+#menu-toggle {
+    display: none;
+}
 
-    <section class="video-highlights-section">
-        <div class="content-box">
-            <p class="tag">FEATURES</p>
-            <h2 class="title">MATCH HIGHLIGHTS &<br> VIDEO SHARING</h2>
-    
-            <ul class="features-list">
-                <li>Upload and share match clips, best performances, and practice sessions.</li>
-                <li>Watch and engage with trending cricket videos.</li>
-                <li>Get feedback from coaches and the cricketing community.</li>
-            </ul>
-        </div>
-    </section>
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
 
-    <section class="join-matcha-section">
-        <div class="top-bg"></div>
-    
-        <div class="content-wrapper">
-            <h1 class="big-title">
-                Matcha
-            </h1>
-    
-            <div class="stumps-area">
-                <img src="https://www.shutterstock.com/image-illustration/cricket-stadium-white-gray-color-260nw-2494817299.jpg" alt="stumps" class="stumps-img">
-            </div>
-    
-            <p class="welcome-text">WELCOME BREAKERS</p>
-    
-            <h2 class="main-heading">JOIN THE MATCHA COMMUNITY TODAY!</h2>
-    
-            <p class="description">
-                Step into the future of cricket networking and player growth.
-                Sign up on Matcha and start your cricket journey today.
-            </p>
-        </div>
-    </section>
+/* ==========================
+   HERO SECTION
+========================== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    background: #101010;
+    padding: 140px 40px 40px;
+    align-items: center;
+    position: relative;
+}
 
-    <footer class="footer-section">
-        <div class="footer-container">
-    
-            <!-- LEFT SECTION -->
-            <div class="footer-left">
-                <h2>JOIN OUR COMMUNITY &<br>GET ENGAGED</h2>
-    
-                <div class="newsletter-row">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>GET NEWSLETTER</span>
-                </div>
-    
-                <hr class="line">
-    
-                <button class="subscribe-btn">Subscribe</button>
-    
-                <div class="social-links">
-                    <span>FOLLOW US</span>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-    
-            <!-- RIGHT SECTION -->
-            <div class="footer-right">
-    
-                <div class="links-box">
-                    <h3>USEFUL LINKS</h3>
-                    <ul>
-                        <li>About Us</li>
-                        <li>Features</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-    
-                <div class="contact-box">
-                    <h3>CONTACT INFO</h3>
-                    <p>+93 (21) 2883 2938</p>
-                    <p>+383 (21) 23 43984</p>
-                    <p>info@matcha.com</p>
-                </div>
-    
-            </div>
-    
-        </div>
-    </footer>
+.hero-text {
+    position: relative;
+    padding-left: 100px;
+    z-index: 10;
+    margin-top: -10px;
+}
+
+.tag {
+    color: #63ffbf;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin: 20px 0 30px;
+}
+
+.cta {
+    background: #e8fff3;
+    color: #003924;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: "Montserrat";
+    transition: 0.25s;
+}
+
+.cta:hover {
+    background: #c1ffdf;
+}
+
+.number-bg {
+    position: absolute;
+    top: -110px;
+    left: 100px;
+    font-size: 200px;
+    font-weight: 800;
+    font-family: "Montserrat";
+    color: rgba(111, 240, 208, 0.1);
+    pointer-events: none;
+}
+
+/* ==========================
+   HERO IMAGE SLIDES
+========================== */
+.hero-image {
+    position: relative;
+    width: 95%;
+    height: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: -80px;
+}
+
+.hero-image .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideAnimation 12s infinite;
+}
+
+.hero-image .slide1 {
+    background-image: url('https://images.pexels.com/photos/3601184/pexels-photo-3601184.jpeg');
+    animation-delay: 0s;
+}
+
+.hero-image .slide2 {
+    background-image: url('https://media.istockphoto.com/id/621823884/photo/female-cricketer-batting.jpg?s=612x612&w=0&k=20&c=jpuv3Tp_bxZTe7rziZYVaOavU1npbibdrgSDEHyouCA=');
+    animation-delay: 4s;
+}
+
+.hero-image .slide3 {
+    background-image: url('https://t3.ftcdn.net/jpg/12/43/40/34/360_F_1243403406_3o33UhhrpObpgovhgMNk9MFO3yfVDpMj.jpg');
+    animation-delay: 8s;
+}
+
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    41% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ==========================
+   SOCIAL BAR
+========================== */
+.hero-left-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-right: 1px solid #3a3838;
+}
+
+.hero-left-bar .copyright {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #bcbcbc;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 70px;
+}
+
+.bottom-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.follow-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #d0d0d0;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #63ffbf;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* TABLET */
+@media (max-width: 1100px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-left: 0;
+    }
+
+    .number-bg {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        width: 100%;
+        height: 450px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    /* NAV MENU */
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 80px;
+    }
+
+    /* HERO */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 120px 20px 40px;
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .number-bg {
+        font-size: 120px;
+        top: -20px;
+    }
+
+    .hero-image {
+        height: 300px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero-left-bar {
+        display: none;
+    }
+
+    .search-icon {
+        right: 20px;
+    }
+
+    .logo {
+        left: 20px;
+    }
+}
 
 
-</body>
 
-</html>
+/* ===== Main Section ===== */
+.about-section {
+    display: flex;
+    background-color: #e7e5e5;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 10px; */
+    padding: 50px 50px;
+}
+
+/* ===== Image Section ===== */
+.image-section img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ===== Analysis Cards Column ===== */
+.c2-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0%;
+    gap: 15px;
+}
+
+.ana-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid #eee;
+    padding: 15px 18px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.icon-sec {
+    width: 35px;
+    height: 35px;
+    background: #e8f9f0;
+    padding-top:5px ;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+.anaylis-name p {
+    font-size: 13px;
+    color: #555;
+}
+
+.anaylis-name h5 {
+    font-size: 16px;
+    color: #000;
+}
+
+/* ===== What Section ===== */
+.what-section {
+    max-width: 300px;
+}
+
+.wel-t {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.what-is-matcha {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.what-is-matcha span {
+    color: #02b272;
+}
+
+.matcha-para {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #02b272;
+}
+
+/* ===================== RESPONSIVE CSS ===================== */
+
+/* ===== Large Laptops (1300px ↓) ===== */
+@media (max-width: 1300px) {
+    .image-section img {
+        width: 550px;
+    }
+
+    .what-is-matcha {
+        font-size: 42px;
+    }
+}
+
+/* ===== Laptops / Tablets (1100px ↓) ===== */
+@media (max-width: 1100px) {
+    .about-section {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .c2-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ana-card {
+        width: 250px;
+    }
+
+    .what-section {
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .what-is-matcha {
+        font-size: 40px;
+    }
+}
+
+/* ===== Tablets / Large Phones (768px ↓) ===== */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px;
+    }
+
+    .image-section img {
+        width: 90%;
+    }
+
+    .ana-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .what-is-matcha {
+        font-size: 32px;
+    }
+
+    .matcha-para {
+        font-size: 14px;
+    }
+}
+
+/* ===== Mobile Phones (480px ↓) ===== */
+@media (max-width: 480px) {
+
+    .about-section {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .image-section img {
+        width: 100%;
+    }
+
+    .ana-card {
+        width: 100%;
+    }
+
+    .what-section {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .what-is-matcha {
+        font-size: 28px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+
+/* ===============================
+      WHY CHOOSE MATCHA SECTION
+=================================*/
+
+.why-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 80px 60px;
+    background: #f6f6f6;
+    gap: 10px;
+}
+
+/* ---------- Left Heading Block ---------- */
+.why-match {
+    max-width: 350px;
+}
+
+.wel-t {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.why-title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.why-title span {
+    color: #02b272;
+}
+
+/* ---------- Left Content Block ---------- */
+.why-left {
+    max-width: 380px;
+}
+
+.why-para {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.why-list {
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+
+.why-list li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+.why-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+}
+
+/* ===============================
+          RIGHT IMAGE + CARDS
+=================================*/
+
+/* ------------ IMAGE WRAPPER ------------ */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper img {
+    width: 420px;
+    height: 450px;
+    border-radius: 10px;
+    /* object-fit: cover; */
+}
+
+/* ------------ FLOATING KPI CARDS ------------ */
+
+.float-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 380px;
+    /* Wider like screenshot */
+    height: 100px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e8e8e8;
+}
+
+/* TOP CARD */
+.top-card {
+    top: 70px;
+    left: -100px;
+    /* aligned like screenshot */
+}
+
+/* BOTTOM CARD */
+.bottom-card {
+    top: 220px;
+    /* slight gap from top card */
+    left: -100px;
+    /* moved slightly right */
+}
+
+/* --------- INSIDE CARD STYLES --------- */
+.fc-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    
+}
+
+.fc-values {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.fc-values span.small {
+    font-size: 12px;
+    color: #777;
+    margin-right: 4px;
+}
+
+.fc-values h4 {
+    font-size: 26px;
+    color: #15b46a;
+    /* bright green like screenshot */
+    margin: 12px 0;
+}
+
+.badge {
+    background: #d6ffe7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.badge.green {
+    color: #0c9a55;
+    font-weight: 600;
+}
+
+/* ===============================
+             RESPONSIVE
+=================================*/
+
+@media (max-width: 1200px) {
+    .why-section {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .float-card {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .image-wrapper img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .why-match {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .float-card {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+    }
+}
+
+/* ===============================
+     NEWSLETTER SECTION (FOURTH)
+=================================*/
+
+.newsletter-section {
+    background: #0f0f0f;
+    /* pure dark background */
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* -------- TOP ROW ------- */
+.news-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* Left icon + label */
+.news-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.news-left p {
+    color: #dcdcdc;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Small Icon (You can replace with svg) */
+.icon-news {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #dcdcdc;
+    border-radius: 3px;
+}
+
+/* Horizontal line */
+.line {
+    width: 40%;
+    height: 2px;
+    background: #c0b9b9;
+}
+
+/* -------- SUBSCRIBE BOX -------- */
+.subscribe-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.subscribe-box input {
+    width: 260px;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.sub-btn {
+    background: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    border-left: 4px solid #17b676;
+    /* green left border like your screenshot */
+}
+
+.sub-btn:hover {
+    background: #17b676;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* ===============================
+            RESPONSIVE
+=================================*/
+
+@media (max-width: 768px) {
+
+    .line {
+        width: 25%;
+    }
+
+    .subscribe-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-box input {
+        width: 80%;
+    }
+
+    .sub-btn {
+        width: 80%;
+    }
+}
+
+.fifth-section {
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 100px;
+    gap: 20px;
+    background: #fff;
+}
+
+.left-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #6b6b6b;
+    margin-bottom: 10px;
+}
+
+.left-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.left-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #333;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.middle-image img,
+.right-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .fifth-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .left-content ul {
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+.sixth-section {
+    padding: 80px 120px;
+    background: #0d0d0d;
+    color: white;
+    position: relative;
+}
+
+.six-sec {
+    width: 80%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.six-left h5 {
+    color: #00b27a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.six-left h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* RIGHT SIDE */
+.six-right {
+    position: relative;
+    padding-left: 40px;
+}
+
+.right-item {
+    margin-bottom: 40px;
+}
+
+.right-item p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.right-item hr {
+    border: none;
+    border-bottom: 1px solid #666;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* CIRCLE IMAGE */
+.circle-img {
+    width: 160px;
+    position: absolute;
+    right: -40px;
+    top: 120px;
+    border-radius: 50%;
+}
+
+
+/* ========================================= */
+/* 📱 TABLET RESPONSIVE  (max-width: 992px) */
+/* ========================================= */
+@media (max-width: 992px) {
+
+    .sixth-section {
+        padding: 60px 40px;
+    }
+
+    .six-sec {
+        grid-template-columns: 1fr;
+        /* STACK */
+        width: 90%;
+        text-align: center;
+    }
+
+    .six-left h2 {
+        font-size: 32px;
+    }
+
+    .six-right {
+        padding-left: 0px;
+    }
+
+    .circle-img {
+        position: relative;
+        margin: 30px auto 0;
+        right: 0;
+        top: 0;
+        display: block;
+    }
+}
+
+
+/* ========================================= */
+/* 📱 MOBILE RESPONSIVE (max-width: 600px) */
+/* ========================================= */
+@media (max-width: 600px) {
+
+    .sixth-section {
+        padding: 50px 20px;
+    }
+
+    .six-left h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .right-item p {
+        font-size: 16px;
+    }
+
+    .six-sec {
+        width: 100%;
+    }
+
+    .circle-img {
+        width: 130px;
+        margin-top: 20px;
+    }
+}
+
+
+.seventh-section {
+    padding: 90px 120px;
+    background: #ffffff;
+}
+
+.sev-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* LEFT TEXT */
+.sev-left h5 {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sev-left h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* RIGHT GRID */
+.sev-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 70px;
+}
+
+.sev-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.sev-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.sev-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.sev-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ================================= */
+/*  📱 TABLET RESPONSIVE */
+/* ================================= */
+@media (max-width: 992px) {
+
+    .seventh-section {
+        padding: 70px 40px;
+    }
+
+    .sev-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sev-left h2 {
+        font-size: 32px;
+    }
+
+    .sev-right {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 40px;
+    }
+
+    .sev-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ================================= */
+/*  📱 MOBILE RESPONSIVE */
+/* ================================= */
+@media (max-width: 600px) {
+
+    .seventh-section {
+        padding: 60px 25px;
+    }
+
+    .sev-right {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sev-left h2 {
+        font-size: 28px;
+    }
+
+    .sev-item img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.video-highlights-section {
+    width: 100%;
+    height: 90vh;
+    background-image: url("/assest/section7.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    position: relative;
+    
+}
+
+/* Black box */
+.content-box {
+    background: rgba(0, 0, 0, 0.92);
+    padding: 40px 45px;
+    width: 360px;
+    margin-top: -280px;
+    border-radius: 4px;
+}
+
+/* Text styles */
+.tag {
+    color: #4ce28a;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.features-list li {
+    color: #cfcfcf;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+/* -------------------------------------
+   ✅ Tablet & Mobile Responsiveness
+------------------------------------- */
+@media (max-width: 1024px) {
+    .video-highlights-section {
+        padding: 40px;
+        height: auto;
+        justify-content: center;
+    }
+
+    .content-box {
+        width: 80%;
+        max-width: 250px;
+        /* max-height: 250px; */
+        margin-top: -20px;
+        margin-left: -100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-highlights-section {
+        padding: 20px;
+        height: auto;
+        justify-content: center;
+    }
+
+    .content-box {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .features-list li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .content-box {
+        padding: 25px;
+    }
+}
+
+
+.join-matcha-section {
+    width: 100%;
+    text-align: center;
+}
+
+/* CONTENT SECTION */
+.content-wrapper {
+    padding-top: 420px;
+    padding-bottom: 50px;
+
+    /* responsive background */
+    background-image: url("/assest/back.jpg");
+    background-size: contain;
+    /* ensures full image is always visible */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Prevent content overflow from hiding image */
+    min-height: 400px;
+}
+
+/* TEXT STYLING */
+.welcome-text {
+    margin-top: 20px;
+    color: #444;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.main-heading {
+    font-size: 34px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.description {
+    color: #444;
+    width: 60%;
+    margin: 15px auto 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .content-wrapper {
+        /* padding-top: 450px; */
+        /* reduce spacing so image fits better */
+        background-size: contain;
+        /* keep full image visible */
+        min-height: 300px;
+    }
+
+    .main-heading {
+        font-size: 26px;
+    }
+
+    .description {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+.footer-section {
+    background: #0d0d0d;
+    color: white;
+    padding: 80px 60px;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #333;
+    padding-top: 40px;
+    gap: 40px;
+    position: relative;
+}
+
+/* Vertical Divider */
+.footer-container::before {
+    content: "";
+    width: 1px;
+    background: #333;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+}
+
+/* LEFT SIDE */
+.footer-left h2 {
+    color: #00b27a;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.newsletter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.newsletter-row i {
+    color: #00b27a;
+}
+
+.line {
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 70%;
+    margin: 10px 0 20px 0;
+}
+
+.subscribe-btn {
+    background: #00b27a;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links span {
+    font-size: 12px;
+    color: #999;
+}
+
+.social-links a i {
+    font-size: 16px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.social-links a i:hover {
+    color: #00b27a;
+}
+
+/* RIGHT SIDE */
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+}
+
+.links-box h3,
+.contact-box h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.links-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-box ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.contact-box p {
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-container::before {
+        display: none;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        padding-left: 0;
+        margin-top: 30px;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .line {
+        width: 100%;
+    }
+}

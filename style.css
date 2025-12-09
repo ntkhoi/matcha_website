@@ -1166,7 +1166,7 @@ h1 {
 .video-highlights-section {
     width: 100%;
     height: 90vh;
-    background-image: url("/assest/section7.png");
+    background-image: url("assest/section7.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1277,7 +1277,7 @@ h1 {
     padding-bottom: 50px;
 
     /* responsive background */
-    background-image: url("/assest/back.jpg");
+    background-image: url("assest/back.jpg");
     background-size: contain;
     /* ensures full image is always visible */
     background-position: center;

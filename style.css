@@ -32,9 +32,16 @@ body {
     cursor: pointer;
 }
 
-.logo {
-    position: absolute;
-    left: 40px;
+.logo{
+  position: absolute;
+  left: 40px;
+}
+
+.logo img {
+  height: 40px;     
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .menu {
@@ -164,7 +171,7 @@ h1 {
     justify-content: center;
     z-index: 1;
     overflow: hidden;
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
 .hero-image .slide {
@@ -362,6 +369,10 @@ h1 {
     .logo {
         left: 20px;
     }
+
+    .logo img {
+    height: 30px;
+  }
 }
 
 
@@ -1163,173 +1174,169 @@ h1 {
     }
 }
 
+/* ===========================
+   VIDEO HIGHLIGHTS SECTION
+=========================== */
 .video-highlights-section {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     background-image: url("assest/section7.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 5vw;
     display: flex;
     align-items: center;
-    padding: 0 80px;
+    justify-content: flex-start;
     position: relative;
-    
 }
 
-/* Black box */
 .content-box {
     background: rgba(0, 0, 0, 0.92);
-    padding: 40px 45px;
-    width: 360px;
-    margin-top: -280px;
-    border-radius: 4px;
+    padding: 40px;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 6px;
+    margin-top: -124px;
+    height: auto;
+    min-height: 55vh;
 }
 
-/* Text styles */
 .tag {
     color: #4ce28a;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
 .title {
-    color: #ffffff;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.3;
+    color: #fff;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 800;
     margin-bottom: 20px;
+    line-height: 1.3;
 }
 
 .features-list {
-    list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .features-list li {
-    color: #cfcfcf;
+    color: #ccc;
+    font-size: clamp(14px, 2vw, 16px);
     margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.4;
 }
 
 
-
-/* -------------------------------------
-   ✅ Tablet & Mobile Responsiveness
-------------------------------------- */
-@media (max-width: 1024px) {
-    .video-highlights-section {
-        padding: 40px;
-        height: auto;
-        justify-content: center;
-    }
-
-    .content-box {
-        width: 80%;
-        max-width: 250px;
-        /* max-height: 250px; */
-        margin-top: -20px;
-        margin-left: -100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .video-highlights-section {
-        padding: 20px;
-        height: auto;
-        justify-content: center;
-    }
-
-    .content-box {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .title {
-        font-size: 22px;
-    }
-
-    .features-list li {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 20px;
-    }
-
-    .content-box {
-        padding: 25px;
-    }
-}
-
-
+/* ===========================
+   JOIN MATCHA SECTION
+=========================== */
 .join-matcha-section {
     width: 100%;
     text-align: center;
 }
 
-/* CONTENT SECTION */
 .content-wrapper {
-    padding-top: 420px;
-    padding-bottom: 50px;
-
-    /* responsive background */
     background-image: url("assest/back.jpg");
-    background-size: contain;
-    /* ensures full image is always visible */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Prevent content overflow from hiding image */
-    min-height: 400px;
+    width: 100%;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 0 20px 10px 20px; /
 }
 
-/* TEXT STYLING */
 .welcome-text {
-    margin-top: 20px;
+    font-size: 14px;
     color: #444;
-    font-size: 12px;
-    letter-spacing: 1px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .main-heading {
-    font-size: 34px;
+    font-size: clamp(24px, 5vw, 35px);
     font-weight: 800;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .description {
     color: #444;
-    width: 60%;
-    margin: 15px auto 0;
-    font-size: 16px;
+    width: 70%;
+    max-width: 600px;
+    margin: 10px auto 0;
+    font-size: clamp(14px, 2vw, 18px);
     line-height: 1.6;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
 
+/* ===========================
+     RESPONSIVE BREAKPOINTS
+=========================== */
+@media (max-width: 1024px) {
+    .video-highlights-section {
+        padding: 40px 5vw;
+    }
     .content-wrapper {
-        /* padding-top: 450px; */
-        /* reduce spacing so image fits better */
-        background-size: contain;
-        /* keep full image visible */
-        min-height: 300px;
+        min-height: 65vh;
+        padding-bottom: 50px;
     }
-
-    .main-heading {
-        font-size: 26px;
-    }
-
-    .description {
-        width: 90%;
-        font-size: 14px;
+    .content-box {
+        margin-top: -100px;
+        min-height: 50vh;
+        max-width: 340px;
     }
 }
+
+@media (max-width: 768px) {
+    .video-highlights-section {
+        padding: 30px 5vw;
+    }
+    .content-wrapper {
+        min-height: 55vh;
+        padding-bottom: 40px;
+    }
+    .content-box {
+        margin-top: -80px;
+        min-height: 45vh;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-highlights-section {
+        padding: 20px 5vw;
+    }
+    .content-wrapper {
+        min-height: 50vh;
+        padding-bottom: 35px;
+    }
+    .content-box {
+        margin-top: -60px;
+        min-height: 40vh;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 360px) {
+    .video-highlights-section {
+        padding: 15px 5vw;
+    }
+    .content-wrapper {
+        min-height: 45vh;
+        padding-bottom: 30px;
+    }
+    .content-box {
+        margin-top: -50px;
+        min-height: 35vh;
+        max-width: 100%;
+    }
+}
+
 
 .footer-section {
     background: #0d0d0d;
@@ -1446,7 +1453,6 @@ h1 {
     color: #ccc;
     cursor: pointer;
 }
-
 .contact-box p {
     margin-bottom: 10px;
     color: #ccc;

@@ -1,0 +1,26 @@
+{
+  "name": "matcha-website",
+  "version": "1.0.0",
+  "description": "Matcha cricket scoring and analysis website",
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "htmlhint \"**/*.html\" --ignore \"node_modules/**\"",
+    "lint:css": "stylelint \"**/*.css\" --ignore-pattern \"node_modules/**\"",
+    "lint:js": "eslint \"**/*.js\" --ignore-pattern \"node_modules/**\" || true",
+    "lint:fix": "npm run lint:css:fix && npm run lint:js:fix",
+    "lint:css:fix": "stylelint \"**/*.css\" --fix --ignore-pattern \"node_modules/**\"",
+    "lint:js:fix": "eslint \"**/*.js\" --fix --ignore-pattern \"node_modules/**\" || true"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "keywords": [
+    "cricket",
+    "matcha",
+    "sports"
+  ],
+  "license": "ISC"
+}

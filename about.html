@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Matcha Sport</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ===== Global ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: white;
+        }
+
+        /* ===== NAVBAR (Same as your original) ===== */
+        .navbar {
+            width: 100%;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 40px;
+            font-size: 20px;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .logo {
+            position: absolute;
+            left: 40px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .menu {
+            display: flex;
+            gap: 5px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-family: "Montserrat";
+            color: #000;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 10px 15px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .menu a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#c9f3e9, #e9fff6);
+            transition: 0.3s ease;
+            z-index: -1;
+        }
+
+        .menu a:hover::before {
+            top: 0;
+        }
+
+        .menu a:hover {
+            color: #000;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+        }
+
+    @media(max-width: 900px){
+        .menu {
+            position: absolute;
+            top: 36px;
+            right: 0;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            display: none;
+            border-top: 1px solid black;
+        }
+
+        #menu-toggle:checked ~ .menu {
+            display: flex;
+        }
+
+        .menu-icon {
+            display: block;
+            position: absolute;
+            right: 80px;
+        }
+    }
+
+        /* ===== About Section ===== */
+        .about-section {
+            max-width: 1100px;
+            margin: 100px auto 80px; /* offset for fixed navbar */
+            padding: 0 40px;
+        }
+
+        .about-section h1 {
+            font-family: "Montserrat";
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .about-section h2 {
+            font-family: "Montserrat";
+            font-size: 24px;
+            font-weight: 700;
+            margin: 20px 0 10px;
+            color: #00906f;
+        }
+
+        .about-section p {
+            font-family: "Montserrat";
+            font-size: 16px;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .about-section a {
+            color: #00906f;
+            text-decoration: none;
+        }
+
+        .about-section a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><img src="assest/Vector.png" alt=""></div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+
+        <nav class="menu">
+            <a href="index.html">HOME</a>
+            <a href="about.html"style="background:#c9f3e9">ABOUT</a>
+            <a href="index.html#FEATURES">FEATURES</a>
+            <a href="plan&pricing.html">PLAN & PRICING</a>
+            <a href="index.html#CONTACT">CONTACT</a>
+        </nav>
+
+        <div class="search-icon"><i class="fas fa-search"></i></div>
+    </header>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p><strong>Matcha Sport by TVConal</strong></p>
+        <p>Television Content Analytics (TVConal) is a technology startup with the main line of business in using analytics to support content creation in TV broadcasting. At TVConal, we are committed to building modern and highly scalable sport analytics software for live broadcasting. We use state-of-the-art methods in machine learning, computer vision, and artificial intelligence to build applications.</p>
+
+        <h2>Our Mission</h2>
+        <p>To revolutionize sports broadcasting through innovative analytics solutions that enhance content creation and viewer engagement.</p>
+
+        <h2>Company Information</h2>
+        <p><strong>Website:</strong> <a href="https://www.tvconal.com" target="_blank">www.tvconal.com</a></p>
+        <p><strong>Industry:</strong> Broadcast Media Production and Distribution</p>
+        <p><strong>Company Size:</strong> 11-50 employees</p>
+        <p><strong>Headquarters:</strong> Singapore, Singapore</p>
+        <p><strong>Founded:</strong> 2016</p>
+        <p><strong>Specialties:</strong> AI Applications, Automation, Sports Analytics, Video Analytics, Live Broadcast, Machine Learning, Computer Vision, Smart Applications, Sports Coaching, and Big Data.</p>
+
+        <h2>Our Location</h2>
+        <p>Address: 1 Changi North Street 1, #2, Singapore, Singapore 498789</p>
+        <p><a href="#">Get Directions</a></p>
+
+        <h2>Connect with Us</h2>
+        <p>Join our team of innovative professionals passionate about transforming sports analytics. Visit our website or LinkedIn page for more information.</p>
+    </section>
+
+</body>
+</html>

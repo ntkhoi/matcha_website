@@ -1,426 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Join the Matcha cricket community today.">
-<meta name="theme-color" content="#2D8B7A">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<title>Join Matcha Community</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Matcha cricket community today.">
+    <meta name="theme-color" content="#2D8B7A">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Join Matcha Community</title>
 
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-/* ================= BASE ================= */
-* {
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-    font-family: "Montserrat", Arial, sans-serif;
-    background: #fff;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* ================= NAVBAR ================= */
-.navbar {
-    width: 100%;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #eee;
-}
-.logo { 
-    position: absolute;
-    left: 40px; 
-}
-.logo img { 
-    height: 40px; 
-}
-
-.search-icon {
-    position: absolute;
-    right: 40px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.menu {
-    display: flex;
-    gap: 5px;
-}
-.menu a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 10px 15px;
-    position: relative;
-}
-
-#menu-toggle { 
-    display: none; 
-}
-.menu-icon { 
-    display: none; 
-    font-size: 22px; 
-    cursor: pointer; 
-}
-
-/* ================= FORM ================= */
-.modal {
-    margin-top: 60px; /* navbar space */
-    padding: 20px 15px;
-}
-.modal-box {
-    background: #0f0f0f;
-    color: #fff;
-    max-width: 420px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 24px;
-    border-radius: 14px;
-    box-shadow: 0 0 40px rgba(23,201,100,.35);
-    max-height: 80vh;
-    display: flex;
-    flex-direction: column;
-}
-h2 { 
-    color: #17c964; 
-    margin-bottom: 6px; 
-}
-p { 
-    font-size: 14px; 
-    opacity: 0.8; 
-    margin-bottom: 18px; 
-}
-
-.modal-box form {
-    overflow-y: auto;
-    padding-right: 4px;
-}
-
-.field-label {
-    display: block;
-    font-size: 13px;
-    color: #aaa;
-    margin-bottom: 6px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 14px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    background: #1a1a1a;
-    color: #fff;
-    font-size: 14px;
-}
-
-textarea { 
-    resize: none; 
-    height: 80px; }
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #17c964;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: auto;
-}
-
-/* ================= FOOTER ================= */
-.footer-section {
-    background: #0d0d0d;
-    color: white;
-    padding: 0px 40px;
-    border-bottom: 1px solid white;
-}
-
-.footer-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: start;
-    padding-top: 5px;
-    gap: 40px;
-    position: relative;
-}
-
-/* Vertical Divider */
-.footer-container::before {
-    content: "";
-    width: 1px;
-    background: white;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-}
-
-.footer-left {
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-bottom: 10px;
-}
-
-/* LEFT SIDE */
-.footer-left h2 {
-    color: #00b27a;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 30px;
-}
-
-.newsletter-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-.newsletter-row i { color: #00b27a; }
-
-.line {
-    border: none;
-    border-bottom: 1px solid #e1bebe;
-    width: 70%;
-    margin: 10px 0 20px 0;
-}
-
-.subscribe-btn {
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px 25px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-bottom: 25px;
-    font-weight: 600;
-    border-left: 10px solid #17b676;
-    width: 30%;
-    border-radius: 0%;
-}
-.subscribe-btn:hover {
-    background: #17b676;
-    color: #fff;
-    transition: 0.3s;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-.social-links span { font-size: 12px; color: #999; }
-.social-links a i { font-size: 16px; color: white; transition: 0.3s ease; }
-.social-links a i:hover { color: #00b27a; }
-
-/* RIGHT SIDE */
-.footer-right {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-.icon-image a img { width: 100px; }
-.Termcondition a, .Privacypolicy a { text-decoration: none; color: #17b676; }
-.links-box h3, .contact-box h3 {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-.links-box ul { list-style: none; padding: 0; }
-.links-box ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #ccc;
-    cursor: pointer;
-}
-.footer-right a { text-decoration: none; color: inherit; }
-.contact-box p { margin-bottom: 10px; color: #ccc; font-size: 14px; }
-
-/* COPYRIGHT SECTION */
-.footer-bottom {
-    width: 100%;
-    text-align: center;
-    padding: 3px 0;
-    background: #0d0d0d;
-}
-.footer-bottom p { color: #ccc; font-size: 13px; }
-.footer-bottom span { color: #17b676; font-weight: 600; }
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-    .navbar { padding: 14px 20px; }
-    .logo { left: 20px; }
-    .search-icon { right: 20px; }
-
-    .menu {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        display: none;
-        padding: 20px;
-    }
-    #menu-toggle:checked ~ .menu { display: flex; }
-    .menu-icon { display: block; position: absolute; right: 70px; }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-container::before { display: none; }
-
-    .footer-right {
-        flex-direction: column;
-        padding-left: 0;
-        margin-top: 20px;
-        align-items: center;
-        gap: 25px;
-        margin-left: 0;
-    }
-
-    .footer-left {
-        padding-left: 0;
-        align-items: center;
-        margin-top: 0;
-    }
-
-    .line { width: 100%; }
-    .modal-box { max-height: 85vh; }
-}
-</style>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-  <div class="logo"><a href="index.html"><img src="assest/logo-50.png" alt="Matcha Logo"></a></div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html"><img src="assets/logo-50.png" alt="Matcha Logo"></a></div>
 
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
 
-  <nav class="menu">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="index.html#FEATURES">FEATURES</a>
-    <a href="plan&pricing.html">PLAN & PRICING</a>
-    <a href="#CONTACT">CONTACT</a>
-  </nav>
+        <nav class="menu">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="index.html#FEATURES">FEATURES</a>
+            <a href="plan&pricing.html">PLAN & PRICING</a>
+            <a href="index.html#CONTACT">CONTACT</a>
+        </nav>
+    </header>
+    <!-- Search icon removed - non-functional -->
 
-  <div class="search-icon"><i class="fas fa-search"></i></div>
-</header>
+    <!-- Form Section -->
+    <section class="join-modal">
+        <div class="join-modal-box">
+            <h2>Join Matcha Community</h2>
+            <p>Be part of the fastest growing cricket network</p>
 
-<!-- ================= FORM ================= -->
-<section class="modal">
-  <div class="modal-box">
-    <h2>Join Matcha Community</h2>
-    <p>Be part of the fastest growing cricket network</p>
+            <form id="join-form">
+                <label class="field-label">I am a *</label>
+                <select required>
+                    <option value="">Select</option>
+                    <option>Student</option>
+                    <option>Coach</option>
+                </select>
 
-    <form>
-      <label class="field-label">I am a *</label>
-      <select required>
-        <option value="">Select</option>
-        <option>Student</option>
-        <option>Coach</option>
-      </select>
+                <label class="field-label">Where did you hear about us? *</label>
+                <select required>
+                    <option value="">Select</option>
+                    <option>Instagram</option>
+                    <option>Friend</option>
+                    <option>Google</option>
+                    <option>Other</option>
+                </select>
 
-      <label class="field-label">Where did you hear about us? *</label>
-      <select required>
-        <option value="">Select</option>
-        <option>Instagram</option>
-        <option>Friend</option>
-        <option>Google</option>
-        <option>Other</option>
-      </select>
+                <label class="field-label">Message</label>
+                <textarea placeholder="Your message"></textarea>
 
-      <label class="field-label">Message</label>
-      <textarea placeholder="Your message"></textarea>
+                <input type="text" placeholder="Full Name *" required>
+                <input type="email" placeholder="Email Address *" required>
+                <input type="tel" placeholder="Mobile Number (with country code) *" required>
 
-      <input type="text" placeholder="Full Name *" required>
-      <input type="email" placeholder="Email Address *" required>
-      <input type="tel" placeholder="Mobile Number (with country code) *" required>
+                <button type="submit">Join Now</button>
+            </form>
+        </div>
+    </section>
 
-      <button type="submit">Join Now</button>
-    </form>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer id="CONTACT" class="footer-section">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>JOIN OUR COMMUNITY &<br>GET ENGAGED</h2>
+                <div class="newsletter-row">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>GET NEWSLETTER</span>
+                </div>
+                <hr class="line">
+                <button class="subscribe-btn">Subscribe</button>
+                <div class="social-links">
+                    <span>FOLLOW US</span>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
 
-<!-- ================= FOOTER ================= -->
-<footer id="CONTACT" class="footer-section">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2>JOIN OUR COMMUNITY &<br />GET ENGAGED</h2>
-      <div class="newsletter-row">
-        <i class="fa-regular fa-envelope"></i>
-        <span>GET NEWSLETTER</span>
-      </div>
-      <hr class="line" />
-      <button class="subscribe-btn">Subscribe</button>
-      <div class="social-links">
-        <span>FOLLOW US</span>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      </div>
+            <div class="footer-right">
+                <div class="links-box">
+                    <h3>USEFUL LINKS</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#FEATURES">Features</a></li>
+                        <li>Contact</li>
+                        <li class="icon-image"><a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN"><img src="assets/googlestore.png" alt="Google Store"></a></li>
+                        <li class="icon-image"><a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643"><img src="assets/Appstore.png" alt="App Store"></a></li>
+                        <li class="Privacypolicy"><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li class="Termcondition"><a href="terms&conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="contact-box">
+                    <h3>CONTACT INFO</h3>
+                    <p>+93 (21) 2883 2938</p>
+                    <p>+383 (21) 23 43984</p>
+                    <p>info@matcha.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
     </div>
 
-    <div class="footer-right">
-      <div class="links-box">
-        <h3>USEFUL LINKS</h3>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html#FEATURES">Features</a></li>
-          <li>Contact</li>
-          <li class="icon-image"><a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN"><img src="assest/googlestore.png" alt="Google Store"></a></li>
-          <li class="icon-image"><a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643"><img src="assest/Appstore.png" alt="App Store"></a></li>
-          <li class="Privacypolicy"><a href="privacypolicy.html">Privacy Policy</a></li>
-          <li class="Termcondition"><a href="terms&conditions.html">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="contact-box">
-        <h3>CONTACT INFO</h3>
-        <p>+93 (21) 2883 2938</p>
-        <p>+383 (21) 23 43984</p>
-        <p>info@matcha.com</p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<div class="footer-bottom">
-  <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
-</div>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Matcha - Cricket Scoring & Analysis" />
     <meta property="og:description" content="Push your game, elevate your cricketing skills with real-time data and analytics." />
-    <meta property="og:image" content="assest/logo-200.png" />
+    <meta property="og:image" content="assets/logo-200.png" />
 
     <link rel="stylesheet" href="style.css" />
     <link
@@ -33,7 +33,7 @@
   <body>
     <!-- NAVBAR -->
     <header class="navbar">
-      <div class="logo"><a href="#"><img src="assest/logo-50.png" alt="Matcha Logo" /></a></div>
+      <div class="logo"><a href="index.html"><img src="assets/logo-50.png" alt="Matcha Logo" /></a></div>
 
       <!-- Hamburger -->
       <input type="checkbox" id="menu-toggle" />
@@ -42,32 +42,30 @@
       ></label>
 
       <nav class="menu">
-        <a href="#" class="active">HOME</a>
-        <a href="about.html">ABOUT</a>
+        <a href="#" class="nav-active">HOME</a>
+        <a href="#ABOUT">ABOUT</a>
         <a href="#FEATURES">FEATURES</a>
-        <a href="plan&pricing.html">PLAN & PRICING</a>
+        <a href="#PRICING">PRICING</a>
+        <a href="#DOWNLOAD">DOWNLOAD</a>
         <a href="#CONTACT">CONTACT</a>
       </nav>
 
-      <div class="search-icon">
-        <i class="fas fa-search"></i>
-      </div>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
       <!-- LEFT SOCIAL BAR -->
       <div class="hero-left-bar">
-        <div class="copyright">©2023 Matcha</div>
+        <div class="copyright">©2025 Matcha</div>
 
         <div class="bottom-bar">
           <div class="follow-text">FOLLOW US</div>
 
           <div class="social-icons">
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -82,7 +80,10 @@
           CRICKETING SKILLS.
         </h1>
 
-        <a class="cta" href="joincommunity.html">Join Community</a>
+        <div class="hero-cta-group">
+          <a class="cta cta-primary" href="#DOWNLOAD">Download App</a>
+          <a class="cta cta-secondary" href="joincommunity.html">Join Community</a>
+        </div>
 
         <div class="number-bg">01</div>
       </div>
@@ -95,43 +96,43 @@
       </div>
     </section>
 
-    <section class="about-section">
+    <section id="ABOUT" class="about-section">
       <div class="image-section">
-        <img src="assest//SchineAnalysis.jpg" alt="cricket-image" />
+        <img src="assets/SchineAnalysis.jpg" alt="cricket-image" loading="lazy" />
       </div>
       <div class="c2-section">
         <div class="ana-card">
           <div class="icon-sec">
-            <img src="assest/Ball Speed.png" alt="" />
+            <img src="assets/Ball Speed.png" alt="" loading="lazy" />
           </div>
-          <div class="anaylis-name">
+          <div class="analysis-name">
             <p>Ball speed</p>
             <h5>63.7 km/h</h5>
           </div>
         </div>
         <div class="ana-card">
           <div class="icon-sec">
-            <img src="assest/Run Up Speed.png" alt="" />
+            <img src="assets/Run Up Speed.png" alt="" loading="lazy" />
           </div>
-          <div class="anaylis-name">
+          <div class="analysis-name">
             <p>Run Up speed</p>
             <h5>10.5 km/h</h5>
           </div>
         </div>
         <div class="ana-card">
           <div class="icon-sec">
-            <img src="assest/Foot Distance.png" alt="" />
+            <img src="assets/Foot Distance.png" alt="" loading="lazy" />
           </div>
-          <div class="anaylis-name">
+          <div class="analysis-name">
             <p>Foot Distance</p>
             <h5>93.8 cm</h5>
           </div>
         </div>
         <div class="ana-card">
           <div class="icon-sec">
-            <img src="assest/Ball Scope.png" alt="" />
+            <img src="assets/Ball Scope.png" alt="" loading="lazy" />
           </div>
-          <div class="anaylis-name">
+          <div class="analysis-name">
             <p>Ball slope</p>
             <h5>5.4</h5>
           </div>
@@ -145,7 +146,7 @@
           tournaments and players measure performance with real-time data, score
           updates and live match analytics.
         </p>
-        <button class="btn">VIEW MORE</button>
+        <a class="btn" href="#FEATURES">VIEW MORE</a>
       </div>
     </section>
 
@@ -171,21 +172,22 @@
           <li>Get Noticed by Scouts</li>
         </ul>
 
-        <button class="btn why-btn">VIEW MORE</button>
+        <a class="btn why-btn" href="#FEATURES">VIEW MORE</a>
       </div>
 
       <div class="why-right">
         <div class="image-wrapper">
-          <img src="assest/player.png" alt="player" />
+          <img src="assets/player.jpg" alt="player" loading="lazy" />
 
           <!-- floating cards -->
           <div class="float-card top-card">
             <div class="fc-title">
               <div class="fc-name">
                 <img
-                  src="assest/Bowler speed.png"
+                  src="assets/Bowler speed.png"
                   class="log-imges"
                   alt="Boweler speed"
+                  loading="lazy"
                 />
                 <div class="name-t">
                   <h3>BOWLER SPEED</h3>
@@ -218,9 +220,10 @@
             <div class="fc-title">
               <div class="fc-name">
                 <img
-                  src="assest/Ball Speed.png"
+                  src="assets/Ball Speed.png"
                   class="log-imges"
                   alt="Boweler speed"
+                  loading="lazy"
                 />
                 <div class="name-t">
                   <h3>BOWLER SPEED</h3>
@@ -252,21 +255,6 @@
       </div>
     </section>
 
-    <section class="newsletter-section">
-      <div class="news-top">
-        <div class="news-left">
-          <i class="fa-regular fa-envelope"></i>
-          <p>GET NEWSLETTER & DISCOUNT</p>
-        </div>
-        <div class="line"></div>
-
-      </div>
-
-      <div class="subscribe-box">
-        <button class="sub-btn">Subscribe</button>
-      </div>
-    </section>
-
     <section class="fifth-section">
       <div class="left-content">
         <h4>KEY FEATURES</h4>
@@ -285,11 +273,11 @@
       </div>
 
       <div class="middle-image">
-        <img src="assest/profileimage.jpg" alt="Profile Card" />
+        <img src="assets/profileimage.jpg" alt="Profile Card" loading="lazy" />
       </div>
 
       <div class="right-image">
-        <img src="assest/postImage.jpg" alt="Cricket Image" />
+        <img src="assets/postImage.jpg" alt="Cricket Image" loading="lazy" />
       </div>
     </section>
 
@@ -321,7 +309,7 @@
             <hr />
           </div>
           <!--
-                <img src="/assest//analysis.jpg" class="circle-img" alt="Analytics UI"> -->
+                <img src="assets/analysis.jpg" class="circle-img" alt="Analytics UI"> -->
         </div>
       </div>
     </section>
@@ -436,6 +424,85 @@
       </div>
     </section>
 
+    <!-- PRICING SECTION -->
+    <section id="PRICING" class="pricing-section">
+      <h2>Plan & Pricing</h2>
+      <p class="subtext">Choose the perfect plan for your sports analytics needs</p>
+
+      <div class="pricing-container">
+        <!-- FREE PLAN -->
+        <div class="plan-card">
+          <h3 class="plan-title">Free</h3>
+          <p class="price">$0</p>
+          <ul class="features">
+            <li><i class="fa-solid fa-check"></i> 10 clips analysis per user</li>
+            <li><i class="fa-solid fa-check"></i> Equivalent to 10 free tokens</li>
+          </ul>
+          <a class="btn" href="joincommunity.html">Get Started</a>
+        </div>
+
+        <!-- BASIC PLAN -->
+        <div class="plan-card featured">
+          <h3 class="plan-title">Basic</h3>
+          <p class="price">$14.99 <span>/ month</span></p>
+          <ul class="features">
+            <li><i class="fa-solid fa-check"></i> Film up to 600 deliveries monthly</li>
+            <li><i class="fa-solid fa-check"></i> 10 sessions per month</li>
+            <li><i class="fa-solid fa-check"></i> Auto-clipping videos</li>
+            <li><i class="fa-solid fa-check"></i> Ball trajectory analysis</li>
+            <li><i class="fa-solid fa-check"></i> Ball KPIs: Speed, Spin, Swing</li>
+            <li><i class="fa-solid fa-check"></i> 10 GB storage</li>
+          </ul>
+          <a class="btn" href="joincommunity.html">Choose Plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD APP SECTION -->
+    <section id="DOWNLOAD" class="download-section">
+      <div class="download-container">
+        <div class="download-content">
+          <span class="download-tag">MOBILE APP</span>
+          <h2>Get Matcha on Your Phone</h2>
+          <p>AI-powered motion analysis for cricketers. Track ball speed, run-up metrics, and get instant feedback on every delivery.</p>
+
+          <div class="app-features">
+            <div class="app-feature">
+              <i class="fas fa-crosshairs"></i>
+              <span>Motion Tracking</span>
+            </div>
+            <div class="app-feature">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Speed Analysis</span>
+            </div>
+            <div class="app-feature">
+              <i class="fas fa-chart-bar"></i>
+              <span>Performance Reports</span>
+            </div>
+          </div>
+
+          <div class="store-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN" target="_blank" rel="noopener">
+              <img src="assets/googlestore.png" alt="Get it on Google Play" />
+            </a>
+            <a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643" target="_blank" rel="noopener">
+              <img src="assets/Appstore.png" alt="Download on App Store" />
+            </a>
+          </div>
+        </div>
+
+        <div class="download-visual">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen-img">
+              <img src="assets/session-stats.png" alt="Matcha App - Session Analysis Stats" />
+            </div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="video-highlights-section">
       <div class="content-box">
         <p class="tag">FEATURES</p>
@@ -497,10 +564,10 @@
             <h3>USEFUL LINKS</h3>
             <ul>
               <li><a href="about.html">About Us</a></li>
-              <li><a href="#FEATURES">Features<a></a></li>
-              <li>Contact</li>
-              <li class="icon-image"><a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN"><img src="assest/googlestore.png" alt="googlestore"></a></li>
-              <li class="icon-image"><a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643" ><img src="assest/Appstore.png" alt="Appstore"></a></li>
+              <li><a href="#FEATURES">Features</a></li>
+              <li><a href="#CONTACT">Contact</a></li>
+              <li class="icon-image"><a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN"><img src="assets/googlestore.png" alt="googlestore" loading="lazy"></a></li>
+              <li class="icon-image"><a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643" ><img src="assets/Appstore.png" alt="Appstore" loading="lazy"></a></li>
               <li class="Privacypolicy"><a href="privacypolicy.html" >Privacy Policy</a></li>
               <li class="Termcondition"><a href="terms&conditions.html" >Terms & Conditions</a></li>
           </div>
@@ -517,10 +584,13 @@
 
 
     </footer>
-  </body>
-  <section class="copy-right">
-     <div class="footer-bottom">
+
+    <section class="copy-right">
+      <div class="footer-bottom">
         <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
       </div>
-  </section>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

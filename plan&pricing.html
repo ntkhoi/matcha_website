@@ -1,304 +1,332 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plan & Pricing - Matcha Sport</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Matcha pricing plans - Choose the right plan for your cricket journey."
+        />
+        <meta name="theme-color" content="#2D8B7A" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="apple-touch-icon.png"
+        />
+        <title>Plan & Pricing - Matcha Sport</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
 
-  <style>
-    /* ===== Global ===== */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+        <style>
+            /* ===== Global ===== */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
 
-    html {
-      scroll-behavior: smooth;
-    }
+            html {
+                scroll-behavior: smooth;
+            }
 
-    body {
-        background: white;
-    }
+            body {
+                background: white;
+            }
 
-    /* ===== NAVBAR (Same as About Us page) ===== */
-    .navbar {
-        width: 100%;
-        padding: 18px 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: white;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        border-bottom: 1px solid #eee;
-    }
+            /* ===== NAVBAR (Same as About Us page) ===== */
+            .navbar {
+                width: 100%;
+                padding: 18px 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                border-bottom: 1px solid #eee;
+            }
 
-    .search-icon {
-        position: absolute;
-        right: 40px;
-        font-size: 20px;
-        color: #000;
-        cursor: pointer;
-    }
+            .search-icon {
+                position: absolute;
+                right: 40px;
+                font-size: 20px;
+                color: #000;
+                cursor: pointer;
+            }
 
-    .logo {
-        position: absolute;
-        left: 40px;
-    }
+            .logo {
+                position: absolute;
+                left: 40px;
+            }
 
-    .logo img {
-        height: 40px;
-        width: auto;
-        object-fit: contain;
-        display: block;
-    }
+            .logo img {
+                height: 40px;
+                width: auto;
+                object-fit: contain;
+                display: block;
+            }
 
-    .menu {
-        display: flex;
-        gap: 5px;
-    }
+            .menu {
+                display: flex;
+                gap: 5px;
+            }
 
-    .menu a {
-        text-decoration: none;
-        font-family: "Montserrat";
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        letter-spacing: 1px;
-        position: relative;
-        padding: 10px 15px;
-        overflow: hidden;
-        display: inline-block;
-    }
+            .menu a {
+                text-decoration: none;
+                font-family: "Montserrat";
+                color: #000;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 1px;
+                position: relative;
+                padding: 10px 15px;
+                overflow: hidden;
+                display: inline-block;
+            }
 
-    .menu a::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#c9f3e9, #e9fff6);
-        transition: 0.3s ease;
-        z-index: -1;
-    }
+            .menu a::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#c9f3e9, #e9fff6);
+                transition: 0.3s ease;
+                z-index: -1;
+            }
 
-    .menu a:hover::before {
-        top: 0;
-    }
+            .menu a:hover::before {
+                top: 0;
+            }
 
-    .menu a:hover {
-        color: #000;
-    }
+            .menu a:hover {
+                color: #000;
+            }
 
-    #menu-toggle {
-        display: none;
-    }
+            #menu-toggle {
+                display: none;
+            }
 
-    .menu-icon {
-        display: none;
-        font-size: 24px;
-        color: #000;
-        cursor: pointer;
-    }
+            .menu-icon {
+                display: none;
+                font-size: 24px;
+                color: #000;
+                cursor: pointer;
+            }
 
-    @media(max-width: 900px){
-        .menu {
-            position: absolute;
-            top: 36px;
-            right: 0;
-            width: 100%;
-            background: white;
-            flex-direction: column;
-            gap: 20px;
-            padding: 20px;
-            display: none;
-            border-top: 1px solid black;
-        }
+            @media (max-width: 900px) {
+                .menu {
+                    position: absolute;
+                    top: 36px;
+                    right: 0;
+                    width: 100%;
+                    background: white;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 20px;
+                    display: none;
+                    border-top: 1px solid black;
+                }
 
-        #menu-toggle:checked ~ .menu {
-            display: flex;
-        }
+                #menu-toggle:checked ~ .menu {
+                    display: flex;
+                }
 
-        .menu-icon {
-            display: block;
-            position: absolute;
-            right: 80px;
-        }
-    }
+                .menu-icon {
+                    display: block;
+                    position: absolute;
+                    right: 80px;
+                }
+            }
 
-    /* ================================
+            /* ================================
        PRICING SECTION
     ================================ */
-    .pricing-section {
-        padding: 140px 10vw 80px;
-        text-align: center;
-        margin-top: -40px; /* offset for fixed navbar */
-    }
+            .pricing-section {
+                padding: 140px 10vw 80px;
+                text-align: center;
+                margin-top: -40px; /* offset for fixed navbar */
+            }
 
-    .pricing-section h1 {
-        font-size: 42px;
-        color: #111;
-        margin-bottom: 10px;
-    }
+            .pricing-section h1 {
+                font-size: 42px;
+                color: #111;
+                margin-bottom: 10px;
+            }
 
-    .pricing-section p.subtext {
-        font-size: 18px;
-        color: #555;
-        margin-bottom: 50px;
-    }
+            .pricing-section p.subtext {
+                font-size: 18px;
+                color: #555;
+                margin-bottom: 50px;
+            }
 
-    .pricing-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-    }
+            .pricing-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
 
-    .plan-card {
-        background: #ffffff;
-        padding: 40px 30px;
-        border-radius: 14px;
-        border: 1px solid #e0e0e0;
-        transition: 0.3s ease;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-    }
+            .plan-card {
+                background: #ffffff;
+                padding: 40px 30px;
+                border-radius: 14px;
+                border: 1px solid #e0e0e0;
+                transition: 0.3s ease;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+            }
 
-    .plan-card:hover {
-        transform: translateY(-8px);
-    }
+            .plan-card:hover {
+                transform: translateY(-8px);
+            }
 
-    .plan-title {
-        font-size: 22px;
-        margin-bottom: 8px;
-        color: #00906f;
-    }
+            .plan-title {
+                font-size: 22px;
+                margin-bottom: 8px;
+                color: #00906f;
+            }
 
-    .price {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: #111;
-    }
+            .price {
+                font-size: 36px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #111;
+            }
 
-    .price span {
-        font-size: 16px;
-        color: #777;
-    }
+            .price span {
+                font-size: 16px;
+                color: #777;
+            }
 
-    .features {
-        text-align: left;
-        margin-bottom: 30px;
-    }
+            .features {
+                text-align: left;
+                margin-bottom: 30px;
+            }
 
-    .features li {
-        margin: 10px 0;
-        color: #555;
-        list-style: none;
-    }
+            .features li {
+                margin: 10px 0;
+                color: #555;
+                list-style: none;
+            }
 
-    .features li i {
-        color: #00906f;
-        margin-right: 10px;
-    }
+            .features li i {
+                color: #00906f;
+                margin-right: 10px;
+            }
 
-    .btn {
-        display: inline-block;
-        background: #00906f;
-        color: white;
-        padding: 12px 26px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.2s ease;
-    }
+            .btn {
+                display: inline-block;
+                background: #00906f;
+                color: white;
+                padding: 12px 26px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: 0.2s ease;
+            }
 
-    .btn:hover {
-        background: #007859;
-    }
+            .btn:hover {
+                background: #007859;
+            }
 
-    @media(max-width: 900px){
-        .pricing-container {
-            grid-template-columns: 1fr;
-        }
-    }
-  </style>
-</head>
-<body>
-
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="logo"><a href="index.html"><img src="assest//Vector.png" alt="" /></a></div>
-
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-
-        <nav class="menu">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="index.html#FEATURES">FEATURES</a>
-            <a href="#" style="background:#c9f3e9;">PLAN & PRICING</a>
-            <a href="index.html#CONTACT">CONTACT</a>
-        </nav>
-
-        <div class="search-icon"><i class="fas fa-search"></i></div>
-    </header>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <h1>Plan & Pricing</h1>
-        <p class="subtext">Choose the perfect plan for your sports analytics needs</p>
-
-        <div class="pricing-container">
-            <!-- BASIC PLAN -->
-            <div class="plan-card">
-                <h2 class="plan-title">Basic</h2>
-                <p class="price">$19 <span>/ month</span></p>
-                <ul class="features">
-                    <li><i class="fa-solid fa-check"></i> Core Matcha analytics</li>
-                    <li><i class="fa-solid fa-check"></i> 720p video support</li>
-                    <li><i class="fa-solid fa-check"></i> Basic reports</li>
-                    <li><i class="fa-solid fa-xmark" style="color:red"></i> No live analytics</li>
-                    <li><i class="fa-solid fa-xmark" style="color:red"></i> No API access</li>
-                </ul>
-                <a class="btn" href="#">Choose Plan</a>
+            @media (max-width: 900px) {
+                .pricing-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html"
+                    ><img src="assest/logo-50.png" alt="Matcha Logo"
+                /></a>
             </div>
 
-            <!-- PRO PLAN -->
-            <div class="plan-card" style="border:2px solid #00906f;">
-                <h2 class="plan-title">Pro</h2>
-                <p class="price">$49 <span>/ month</span></p>
-                <ul class="features">
-                    <li><i class="fa-solid fa-check"></i> Full analytics suite</li>
-                    <li><i class="fa-solid fa-check"></i> 1080p HD video</li>
-                    <li><i class="fa-solid fa-check"></i> Live analytics</li>
-                    <li><i class="fa-solid fa-check"></i> Advanced reports</li>
-                    <li><i class="fa-solid fa-xmark" style="color:red"></i> No API access</li>
-                </ul>
-                <a class="btn" href="#">Choose Plan</a>
-            </div>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon"
+                ><i class="fas fa-bars"></i
+            ></label>
 
-            <!-- ENTERPRISE PLAN -->
-            <div class="plan-card">
-                <h2 class="plan-title">Enterprise</h2>
-                <p class="price">Custom <span>/ quote</span></p>
-                <ul class="features">
-                    <li><i class="fa-solid fa-check"></i> Unlimited analytics</li>
-                    <li><i class="fa-solid fa-check"></i> 4K video support</li>
-                    <li><i class="fa-solid fa-check"></i> Dedicated support</li>
-                    <li><i class="fa-solid fa-check"></i> API + Integration</li>
-                    <li><i class="fa-solid fa-check"></i> Custom dashboards</li>
-                </ul>
-                <a class="btn" href="#">Contact Sales</a>
-            </div>
-        </div>
-    </section>
+            <nav class="menu">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="index.html#FEATURES">FEATURES</a>
+                <a href="#" style="background: #c9f3e9">PLAN & PRICING</a>
+                <a href="index.html#CONTACT">CONTACT</a>
+            </nav>
 
-</body>
+            <div class="search-icon"><i class="fas fa-search"></i></div>
+        </header>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <h1>Plan & Pricing</h1>
+            <p class="subtext">
+                Choose the perfect plan for your sports analytics needs
+            </p>
+
+            <div class="pricing-container">
+                <!-- FREE PLAN -->
+                <div class="plan-card">
+                    <h2 class="plan-title">Free</h2>
+                    <p class="price">$0</p>
+                    <ul class="features">
+                        <li>
+                            <i class="fa-solid fa-check"></i> 10 clips analysis
+                            per user
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Equivalent to 10
+                            free tokens
+                        </li>
+                    </ul>
+                    <a class="btn" href="#">Get Started</a>
+                </div>
+
+                <!-- BASIC PLAN -->
+                <div class="plan-card" style="border: 2px solid #00906f">
+                    <h2 class="plan-title">Basic</h2>
+                    <p class="price">$14.99 <span>/ month</span></p>
+                    <ul class="features">
+                        <li>
+                            <i class="fa-solid fa-check"></i> Film up to 600
+                            deliveries monthly
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> 10 sessions per
+                            month
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Auto-clipping
+                            videos
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Ball trajectory
+                            analysis
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Ball KPIs: Speed,
+                            Spin, Swing
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> 10 GB storage</li>
+                    </ul>
+                    <a class="btn" href="#">Choose Plan</a>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

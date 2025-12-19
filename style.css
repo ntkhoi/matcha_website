@@ -613,6 +613,10 @@ h1 {
         width: 250px;
     }
 
+    .analysis-name p,h5{
+        text-align: left;
+    }
+
     .what-section {
         max-width: 500px;
         text-align: center;
@@ -642,6 +646,10 @@ h1 {
     .ana-card {
         width: 90%;
         margin: 0 auto;
+    }
+
+    .analysis-name p,h5{
+        text-align: left;
     }
 
     .what-is-matcha {
@@ -679,6 +687,10 @@ h1 {
 
     .ana-card {
         width: 100%;
+    }
+
+    .analysis-name p,h5{
+        text-align: left;
     }
 
     .what-section {

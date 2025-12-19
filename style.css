@@ -80,14 +80,6 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.search-icon {
-    position: absolute;
-    right: 40px;
-    font-size: 20px;
-    color: #000;
-    cursor: pointer;
-}
-
 .logo{
   position: absolute;
   left: 40px;
@@ -297,17 +289,17 @@ h1 {
 }
 
 .hero-image .slide1 {
-    background-image: url('https://images.pexels.com/photos/3601184/pexels-photo-3601184.jpeg');
+    background-image: url('assets/Home1.jpeg');
     animation-delay: 0s;
 }
 
 .hero-image .slide2 {
-    background-image: url('https://media.istockphoto.com/id/621823884/photo/female-cricketer-batting.jpg?s=612x612&w=0&k=20&c=jpuv3Tp_bxZTe7rziZYVaOavU1npbibdrgSDEHyouCA=');
+    background-image: url('assets/Home4.jpeg');
     animation-delay: 4s;
 }
 
 .hero-image .slide3 {
-    background-image: url('https://t3.ftcdn.net/jpg/12/43/40/34/360_F_1243403406_3o33UhhrpObpgovhgMNk9MFO3yfVDpMj.jpg');
+    background-image: url('assets/Home3.jpg');
     animation-delay: 8s;
 }
 
@@ -418,6 +410,10 @@ h1 {
         width: 100%;
         height: 450px;
     }
+
+    .hero-left-bar {
+        display: none;
+    }
 }
 
 /* MOBILE */
@@ -474,10 +470,6 @@ h1 {
         display: none;
     }
 
-    .search-icon {
-        right: 20px;
-    }
-
     .logo {
         left: 20px;
     }
@@ -495,16 +487,15 @@ h1 {
     background-color:white;
     justify-content: space-around;
     align-items: center;
-    /* gap: 10px; */
     padding: 50px 50px;
 }
 
 /* ===== Image Section ===== */
 .image-section img {
-    width: 500px;
-    height: auto;
+    width: 300px;
+    height: 550px;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 /* ===== Analysis Cards Column ===== */
@@ -512,8 +503,8 @@ h1 {
     display: flex;
     flex-direction: column;
     padding-bottom: 0%;
-    gap: 15px;
-    margin-top: 210px;
+    gap: 5px;
+    margin-top: 150px;
     margin-left: 20px;
 }
 
@@ -532,6 +523,7 @@ h1 {
 .icon-sec img{
     height: 38px;
     width: 38px;
+    border-radius: 50%;
 }
 
 
@@ -548,15 +540,8 @@ h1 {
 /* ===== What Section ===== */
 .what-section {
     max-width: 300px;
-    margin-top: -50px;
+    margin-top: -100px;
     margin-left: 50px;
-}
-
-.wel-t {
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: #888;
-    margin-bottom: 10px;
 }
 
 .what-is-matcha {
@@ -574,6 +559,7 @@ h1 {
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 25px;
+    text-align: justify;
 }
 
 .btn {
@@ -726,7 +712,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: start;
-    padding: 80px 60px;
+    padding: 50px 50px;
     background: #f6f6f6;
     flex-wrap: nowrap;
     gap: 70px;
@@ -736,13 +722,6 @@ h1 {
 .why-match {
     max-width: 320px;
 }
-
-.wel-t {
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: black;
-}
-
 .why-title {
     font-size: 36px;
     font-weight: 800;
@@ -764,6 +743,7 @@ h1 {
     color: #444;
     line-height: 1.7;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .why-list {
@@ -813,10 +793,10 @@ h1 {
 ==================================*/
 .float-card {
     position: absolute;
-    width: 330px;
+    width: 300px;
     background: #ffffff;
     border-radius: 14px;
-    padding: 12px 10px;
+    padding: 5px 15px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
@@ -848,7 +828,7 @@ h1 {
 }
 
 .name-t h3 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     margin: 0;
 }
@@ -857,17 +837,6 @@ h1 {
     font-size: 12px;
     margin: 0;
     color: #777;
-}
-
-/* Goal badge */
-.fc-goal p {
-    background: #d6ffe7;
-    color: #0c9a55;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    margin: 0;
 }
 
 /* ===============================
@@ -891,7 +860,7 @@ h1 {
 }
 
 .min-max-value h4 {
-    font-size: 18px;
+    font-size: 16px;
     margin: 4px 0 0 0;
     font-weight: 600;
 }
@@ -908,7 +877,7 @@ h1 {
 
 .fc-average h3 {
     margin: 4px 0 0 0;
-    font-size: 26px;
+    font-size: 21px;
     font-weight: 700;
     color: #15b46a;
 }
@@ -917,12 +886,12 @@ h1 {
   FLOAT POSITIONS (DESKTOP)
 ==================================*/
 .top-card {
-    top: 20px;
+    top: 32px;
     left: -100px;
 }
 
 .bottom-card {
-    top: 150px;
+    top: 140px;
     left: -100px;
 }
 
@@ -962,21 +931,41 @@ h1 {
 
     .image-wrapper img {
         width: 100%;
-        max-width: 430px;
+        max-width: 450px;
         height: auto;
     }
 
-    /* FLOATING CARDS → NORMAL BLOCK */
     .float-card {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        margin-left: 0 !important;
-        transform: none !important;
+        width: 55%;
+        height: 20%;
+        padding: 5px;
+    }
 
-        width: 90%;
-        max-width: 360px;
-        margin: 15px auto;
+    .float-card .fc-name{
+        width: 32px;
+    }
+
+    .top-card {
+        margin-top:10px;
+        margin-left: 150px;
+        
+    }
+
+    .bottom-card {
+        margin-top: 45px;
+        margin-left: 150px;
+    }
+
+    .name-t h3{
+        font-size: 16px;
+    }
+
+    .min-max-value h4{
+        font-size: 21px;
+    }
+
+    .fc-average h3 {
+        font-size: 25px;
     }
 }
 
@@ -986,7 +975,36 @@ h1 {
 @media (max-width: 700px) {
 
     .float-card {
-        width: 95%;
+        width: 75%;
+        height: 24%;
+        padding: 5px;
+    }
+
+    .float-card .fc-name{
+        width: 32px;
+    }
+
+    .top-card {
+        margin-top:5px;
+        margin-left: 80px;
+        
+    }
+
+    .bottom-card {
+        margin-top: 30px;
+        margin-left: 80px;
+    }
+
+    .name-t h3{
+        font-size: 15px;
+    }
+
+    .min-max-value h4{
+        font-size: 18px;
+    }
+
+    .fc-average h3 {
+        font-size: 21px;
     }
 
     .image-wrapper img {
@@ -1011,13 +1029,36 @@ h1 {
     }
 
     .float-card {
-        width: 100%;
-        padding: 12px;
+        width: 75%;
+        height: 27%;
+        padding: 5px;
+    }
 
+    .float-card .fc-name{
+        width: 32px;
+    }
+
+    .top-card {
+        margin-top:0px;
+        margin-left: 80px;
+        
+    }
+
+    .bottom-card {
+        margin-top: 15px;
+        margin-left: 80px;
+    }
+
+    .name-t h3{
+        font-size: 12px;
+    }
+
+    .min-max-value h4{
+        font-size: 15px;
     }
 
     .fc-average h3 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .image-wrapper {
@@ -1028,170 +1069,50 @@ h1 {
 
 }
 
+@media (max-width: 370px) {
 
-/* ===============================
-     NEWSLETTER SECTION (FOURTH)
-=================================*/
-
-.newsletter-section {
-    background: #0f0f0f;
-    padding: 80px 0;
-    text-align: center;
-    position: relative;
-}
-
-/* -------- TOP ROW ------- */
-.news-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 40px;
-}
-
-.news-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.news-left i{
-    color: white;
-}
-
-.news-left p {
-    color: #dcdcdc;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-.icon-news {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #dcdcdc;
-    border-radius: 3px;
-}
-
-.line {
-    width: 40%;
-    height: 2px;
-    background: #c0b9b9;
-}
-
-/* ---- ORIGINAL MATCHA LOGO (UNCHANGED) ---- */
-.matcha-logo img{
-    position: absolute;
-    top: 5px;
-    width: 80%;
-    margin-left:-620px;
-    height: 300px;
-}
-
-/* -------- SUBSCRIBE BOX -------- */
-.subscribe-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.subscribe-box input {
-    width: 260px;
-    padding: 12px 14px;
-    border: none;
-    border-radius: 4px;
-    outline: none;
-}
-
-.sub-btn {
-    background: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: 600;
-    border-left: 10px solid #17b676;
-}
-
-.sub-btn:hover {
-    background: #17b676;
-    color: #fff;
-    transition: 0.3s;
-}
-
-/* ===============================
-            RESPONSIVE
-=================================*/
-
-@media (max-width: 1024px) {
-    .line {
-        width: 30%;
+    .image-wrapper img {
+        max-width: 300px;
     }
 
-    .matcha-logo img {
-        margin-left: -350px;
-        width: 70%;
-        height: auto;
-        top: 140px;
-    }
-}
-
-@media (max-width: 768px) {
-    .line {
-        width: 25%;
+    .float-card {
+        width: 75%;
+        height: 27%;
+        padding: 5px;
     }
 
-    .subscribe-box {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    .float-card .fc-name{
+        width: 32px;
     }
 
-    .subscribe-box input,
-    .sub-btn {
-        width: 60%;
+    .top-card {
+        margin-top:-15px;
+        
     }
 
-    .matcha-logo img {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
-
-        width: 85%;
-        height: auto;
-        top: 150px;
+    .bottom-card {
+        margin-top: -5px;
     }
-}
 
-@media (max-width: 480px) {
-
-    .news-left p {
+    .name-t h3{
         font-size: 10px;
     }
 
-    .line {
-        width: 40%;
+    .min-max-value h4{
+        font-size: 13px;
     }
 
-    .subscribe-box input,
-    .sub-btn {
-        width: 60%;
+    .fc-average h3 {
+        font-size: 15px;
     }
 
-    .matcha-logo img {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
-
-        width: 90%;
-        height: auto;
-        top: 220px;
+    .image-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
 }
-
 
 .fifth-section {
     width: 90%;
@@ -1200,22 +1121,18 @@ h1 {
     grid-template-columns: 1.1fr 1fr 1fr;
     align-items: center;
     justify-content: space-around;
-    padding: 80px 100px;
+    padding: 50px 30px;
     gap: 20px;
     background: #fff;
 }
 
-.left-content h4 {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: black;
-    margin-bottom: 10px;
+.left-content{
+    margin-top:-150px;
 }
 
 .left-content h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 34px;
+    font-weight: 750;
     line-height: 1.3;
     margin-bottom: 30px;
 }
@@ -1226,16 +1143,42 @@ h1 {
     color: #333;
     line-height: 1.8;
     font-size: 15px;
+    text-align: justify;
 }
 
-.middle-image img,
+.middle-image img{
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-left: 150px;
+}
 .right-image img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     object-fit: contain;
+    margin-left: 92px;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+
+    /* Adjust image spacing */
+    .middle-image img {
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    .right-image img {
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .left-content{
+        margin-top: -30px;
+    }
+}
+
 @media (max-width: 992px) {
     .fifth-section {
         grid-template-columns: 1fr;
@@ -1251,10 +1194,16 @@ h1 {
     /* Tablet spacing */
     .middle-image img {
         margin-top: 20px;
+        margin-left: 0px;
     }
 
     .right-image img {
         margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .left-content{
+    margin-top:20px;
     }
 }
 
@@ -1266,10 +1215,12 @@ h1 {
     /* Adjust image spacing */
     .middle-image img {
         margin-top: 20px;
+        margin-left: 0px;
     }
 
     .right-image img {
         margin-top: 20px;
+        margin-left: 0px;
     }
 }
 
@@ -1277,20 +1228,24 @@ h1 {
    MOBILE PHONES (max-width: 576px)
 ------------------------------------------ */
 @media (max-width: 576px) {
-
+    
     /* Mobile spacing smoother */
     .middle-image img {
-        margin-top: -40px;
+        margin-top: -10px;
+        margin-left: 0px;
+        
     }
 
     .right-image img {
-        margin-top: -150px;
+        margin-top: -20px;
+        margin-left: 0px;
     }
+
 }
 
 
 .sixth-section {
-    padding: 80px 120px;
+    padding: 50px 50px;
     background: #101010;
     color: white;
     position: relative;
@@ -1444,7 +1399,7 @@ h1 {
 }
 
 .sev-left h2 {
-    font-size: 42px;
+    font-size: 33px;
     font-weight: 700;
     line-height: 1.3;
 }
@@ -1535,59 +1490,6 @@ h1 {
 }
 
 /* ===========================
-   VIDEO HIGHLIGHTS SECTION
-=========================== */
-.video-highlights-section {
-    width: 100%;
-    min-height: 90vh;
-    background-image: url("assets/section7.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-}
-
-.content-box {
-    background: rgba(0, 0, 0, 0.92);
-    padding: 40px;
-    width: 100%;
-    max-width: 360px;
-    border-radius: 6px;
-    margin-top: -124px;
-    height: auto;
-    min-height: 55vh;
-}
-
-.tag {
-    color: #4ce28a;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.title {
-    color: #fff;
-    font-size: clamp(20px, 3vw, 30px);
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.3;
-}
-
-.features-list {
-    padding-left: 18px;
-}
-
-.features-list li {
-    color: #ccc;
-    font-size: clamp(14px, 2vw, 16px);
-    margin-bottom: 10px;
-}
-
-
-/* ===========================
    JOIN MATCHA SECTION
 =========================== */
 .join-matcha-section {
@@ -1637,49 +1539,32 @@ h1 {
      RESPONSIVE BREAKPOINTS
 =========================== */
 @media (max-width: 1024px) {
-    .video-highlights-section {
-        padding: 40px 5vw;
-    }
+
     .content-wrapper {
         min-height: 65vh;
         padding-bottom: 50px;
     }
-    .content-box {
-        margin-top: -100px;
-        min-height: 50vh;
-        max-width: 340px;
-    }
 }
 
 @media (max-width: 768px) {
-    .video-highlights-section {
-        padding: 30px 5vw;
-    }
+    
     .content-wrapper {
         min-height: 55vh;
         padding-bottom: 40px;
     }
 
     .content-wrapper p{
-        margin-bottom: -35px;
-
+        margin-bottom: -10px;
     }
     .content-wrapper h2{
         font-size: 30px;
         padding: 25px 0px;
         margin-bottom: -25px;
     }
-    .content-box {
-        margin-top: -80px;
-        min-height: 45vh;
-        max-width: 90%;
-    }
 }
 
 @media (max-width: 480px) {
-    .video-highlights-section {
-        padding: 20px 5vw;
-    }
+    
     .content-wrapper {
         min-height: 50vh;
         padding-bottom: 50px; 
@@ -1694,30 +1579,18 @@ h1 {
         padding: 25px 0px;
         margin-bottom: -25px;
     }
-    .content-box {
-        margin-top: -60px;
-        min-height: 40vh;
-        max-width: 95%;
-    }
 }
 
-@media (max-width: 375px) {
-    .video-highlights-section {
-        padding: 15px 5vw;
-    }
+@media (max-width: 376px) {
+
     .content-wrapper {
         min-height: 45vh;
         padding-bottom: 30px;
     }
 
-    .content-wrapper p{
-        margin-bottom: -25px;
-
-    }
-    .content-box {
-        margin-top: -50px;
-        min-height: 35vh;
-        max-width: 100%;
+    .content-wrapper p {
+        margin-bottom: -20px;
+        font-size: 12px;
     }
 }
 
@@ -1836,14 +1709,18 @@ h1 {
    width: 100px;
 }
 
-.Termcondition a{
-    text-decoration: none;
-    color: #17b676;
+.about-us{
+    text-decoration: underline;
 }
 
-.Privacypolicy a{
-    text-decoration: none;
-    color: #17b676;;
+.Termcondition{
+    text-decoration: underline;
+    /* color: #17b676; */
+}
+
+.Privacypolicy{
+    text-decoration: underline;
+    /* color: #17b676;; */
 }
 
 .links-box h3,
@@ -1978,9 +1855,10 @@ h1 {
 
 /* ===== PRICING PAGE ===== */
 .pricing-section {
-    padding: 140px 10vw 80px;
+    padding: 50px 50px;
     text-align: center;
     margin-top: -40px;
+    background-color: #f6f6f6;
 }
 
 .pricing-section h1 {
@@ -2076,7 +1954,7 @@ h1 {
 /* ===== Download Section ===== */
 .download-section {
     background: linear-gradient(135deg, #006b4f 0%, #004d39 100%);
-    padding: 100px 5%;
+    padding: 50px 50px;
     color: var(--text-white);
     position: relative;
     overflow: hidden;

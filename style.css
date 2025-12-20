@@ -589,7 +589,7 @@ h1 {
 /* ===== Large Laptops (1300px ↓) ===== */
 @media (max-width: 1300px) {
     .image-section img {
-        width: 550px;
+        width: 400px;
     }
 
     .what-is-matcha {
@@ -605,7 +605,7 @@ h1 {
     }
 
     .image-section img {
-        width: 500px;
+        width: 400px;
         margin-bottom: 20px;
     }
 
@@ -642,6 +642,7 @@ h1 {
 /* ===== Tablets / Large Phones (768px ↓) ===== */
 @media (max-width: 768px) {
     .about-section {
+        width: 90%;
         padding: 30px;
     }
 
@@ -683,6 +684,7 @@ h1 {
 @media (max-width: 480px) {
 
     .about-section {
+        width: 100%;
         padding: 20px;
         gap: 30px;
     }
@@ -692,7 +694,7 @@ h1 {
     }
 
     .ana-card {
-        width: 100%;
+        width: 95%;
     }
 
     .analysis-name p,h5{

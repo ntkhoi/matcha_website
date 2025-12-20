@@ -482,17 +482,23 @@ h1 {
 
 
 /* ===== Main Section ===== */
+
+.abou-sec{
+    background-color:white;
+}
+
 .about-section {
     display: flex;
-    background-color:white;
-    justify-content: space-around;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: space-between;
     align-items: center;
     padding: 50px 50px;
 }
 
 /* ===== Image Section ===== */
 .image-section img {
-    width: 300px;
+    width: 400px;
     height: 550px;
     border-radius: 10px;
     object-fit:cover;
@@ -946,6 +952,9 @@ h1 {
         max-width: 450px;
         height: auto;
     }
+    .why-list{
+        text-align: left;
+    }
 
     .float-card {
         width: 55%;
@@ -985,6 +994,10 @@ h1 {
    MOBILE (700px ↓)
 ============================================ */
 @media (max-width: 700px) {
+
+    .why-list{
+        text-align: left;
+    }
 
     .float-card {
         width: 75%;
@@ -1038,6 +1051,10 @@ h1 {
 
     .image-wrapper img {
         max-width: 300px;
+    }
+
+    .why-list{
+        text-align: left;
     }
 
     .float-card {
@@ -1331,11 +1348,15 @@ h1 {
     .sixth-section {
         padding: 60px 40px;
     }
-
+    
     .six-sec {
         grid-template-columns: 1fr;
         /* STACK */
         width: 90%;
+        text-align: center;
+    }
+
+    .six-left h5{
         text-align: center;
     }
 
@@ -1467,6 +1488,10 @@ h1 {
 
     .sev-left h2 {
         font-size: 32px;
+    }
+
+    .sev-left h5{
+        text-align: center;
     }
 
     .sev-right {

@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (joinForm) {
         initFormValidation(joinForm);
     }
+
+    // Pricing Tabs Handler
+    initPricingTabs();
+
+    // Billing Toggle Handler
+    initBillingToggle();
 });
 
 /**
@@ -231,5 +237,101 @@ function showSuccessMessage(form) {
                 <a href="index.html" style="display: inline-block; margin-top: 25px; padding: 12px 30px; background: #17c964; color: #000; text-decoration: none; border-radius: 25px; font-weight: 600;">Back to Home</a>
             </div>
         `;
+    }
+}
+
+/**
+ * Initialize pricing tabs functionality
+ */
+function initPricingTabs() {
+    const tabs = document.querySelectorAll('.pricing-tab');
+    if (!tabs.length) return;
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            tabs.forEach(function(t) {
+                t.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Get the tab type
+            const tabType = this.getAttribute('data-tab');
+            
+            // Show/hide plans based on tab
+            const allPlans = document.querySelectorAll('.plan-card');
+            allPlans.forEach(function(plan) {
+                if (tabType === 'players') {
+                    // Show all player plans
+                    if (plan.classList.contains('plan-players')) {
+                        plan.style.display = 'block';
+                    } else {
+                        plan.style.display = 'none';
+                    }
+                } else if (tabType === 'coaches') {
+                    // Show only coach and club plans
+                    if (plan.classList.contains('plan-coaches')) {
+                        plan.style.display = 'block';
+                    } else {
+                        plan.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+
+    // Initialize with Players tab active
+    const playersTab = document.querySelector('.pricing-tab[data-tab="players"]');
+    if (playersTab) {
+        playersTab.click();
+    }
+}
+
+/**
+ * Initialize billing toggle functionality
+ */
+function initBillingToggle() {
+    const toggle = document.getElementById('billing-toggle');
+    const monthlyOption = document.querySelector('.billing-option[data-billing="monthly"]');
+    const annualOption = document.querySelector('.billing-option[data-billing="annual"]');
+    
+    if (!toggle || !monthlyOption || !annualOption) return;
+
+    toggle.addEventListener('change', function() {
+        if (this.checked) {
+            monthlyOption.classList.remove('active');
+            annualOption.classList.add('active');
+            // Update prices for annual billing (20% discount)
+            updatePricesForAnnual();
+        } else {
+            monthlyOption.classList.add('active');
+            annualOption.classList.remove('active');
+            // Reset to monthly prices
+            updatePricesForMonthly();
+        }
+    });
+}
+
+/**
+ * Update prices for annual billing
+ */
+function updatePricesForMonthly() {
+    const proPrice = document.querySelector('.plan-card.featured .price');
+    if (proPrice) {
+        proPrice.innerHTML = '$4.99 <span>/ month</span>';
+    }
+}
+
+/**
+ * Update prices for annual billing (20% discount)
+ */
+function updatePricesForAnnual() {
+    const proPrice = document.querySelector('.plan-card.featured .price');
+    if (proPrice) {
+        const monthlyPrice = 4.99;
+        const annualPrice = (monthlyPrice * 12 * 0.8).toFixed(2);
+        proPrice.innerHTML = '$' + annualPrice + ' <span>/ year</span>';
     }
 }

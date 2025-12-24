@@ -18,17 +18,22 @@
 
     <!-- Navbar -->
     <header class="navbar">
-        <div class="logo"><a href="index.html"><img src="assets/logo-50.png" alt="Matcha Logo"></a></div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo-50.png" alt="Matcha Logo" />
+                <span class="logo-text">MATCHA</span>
+            </a>
+        </div>
 
-        <input type="checkbox" id="menu-toggle">
+        <!-- Hamburger -->
+        <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
 
         <nav class="menu">
             <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="index.html#FEATURES">FEATURES</a>
-            <a href="plan&pricing.html">PLAN & PRICING</a>
-            <a href="index.html#CONTACT">CONTACT</a>
+            <a href="index.html#WHYMATCHA">WHY MATCHA</a>
+            <a href="index.html#PRICING">PRICING</a>
+            <a href="index.html#DOWNLOAD" class="download-btn">DOWNLOAD</a>
         </nav>
     </header>
     <!-- Search icon removed - non-functional -->
@@ -71,52 +76,43 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="CONTACT" class="footer-section">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h2>JOIN OUR COMMUNITY &<br>GET ENGAGED</h2>
-                <div class="newsletter-row">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>GET NEWSLETTER</span>
-                </div>
-                <hr class="line">
-                <button class="subscribe-btn">Subscribe</button>
-                <div class="social-links">
-                    <span>FOLLOW US</span>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-right">
-                <div class="links-box">
-                    <h3>USEFUL LINKS</h3>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#FEATURES">Features</a></li>
-                        <li>Contact</li>
-                        <li class="icon-image"><a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN"><img src="assets/googlestore.png" alt="Google Store"></a></li>
-                        <li class="icon-image"><a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643"><img src="assets/Appstore.png" alt="App Store"></a></li>
-                        <li class="Privacypolicy"><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li class="Termcondition"><a href="terms&conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="contact-box">
-                    <h3>CONTACT INFO</h3>
-                    <p>+93 (21) 2883 2938</p>
-                    <p>+383 (21) 23 43984</p>
-                    <p>info@matcha.com</p>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer id="CONTACT" class="footer-section">
+    <div class="footer-container">
+      <!-- LOGO AND TAGLINE -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/logo-50.png" alt="Matcha Logo" />
+          <span class="footer-logo-text">MATCHA</span>
         </div>
-    </footer>
+        <p class="footer-tagline">Performance, insights & live match engagement.</p>
+      </div>
 
-    <div class="footer-bottom">
-        <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
+      <!-- FOOTER LINKS -->
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+        <a href="terms&conditions.html">Terms&Conditions</a>
+        <a href="#CONTACT" class="footer-contact-link">Contact</a>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="footer-social">
+        <h4 class="follow-us-text">Follow Us</h4>
+        <div class="social-icons-wrapper">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
+    </div>
+  </footer>
 
     <script src="js/main.js"></script>
 </body>

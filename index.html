@@ -32,7 +32,12 @@
 <body>
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo"><a href="index.html"><img src="assets/logo-50.png" alt="Matcha Logo" /></a></div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo-50.png" alt="Matcha Logo" />
+        <span class="logo-text">MATCHA</span>
+      </a>
+    </div>
 
     <!-- Hamburger -->
     <input type="checkbox" id="menu-toggle" />
@@ -40,12 +45,10 @@
 
     <nav class="menu">
       <a href="#" class="nav-active">HOME</a>
-      <a href="#ABOUT">ABOUT</a>
-      <a href="#FEATURES">FEATURES</a>
+      <a href="#WHYMATCHA">WHY MATCHA</a>
       <a href="#PRICING">PRICING</a>
-      <a href="#DOWNLOAD">DOWNLOAD</a>
-      <a href="#CONTACT">CONTACT</a>
-      <a href="#MATCHACENTER">MATCHA CENTER</a>
+      <!-- <a href="#CONTACT">CONTACT</a> -->
+      <a href="#DOWNLOAD" class="download-btn">DOWNLOAD</a>
     </nav>
 
   </header>
@@ -70,214 +73,130 @@
 
     <!-- HERO LEFT TEXT -->
     <div class="hero-text">
-      <span class="tag">REVOLUTIONIZING CRICKET AT THE GRASSROOT LEVEL</span>
-
       <h1>
-        PUSH YOUR GAME<br />
-        ELEVATE YOUR<br />
-        CRICKETING SKILLS
+        Train Smarter. Play Better. Connect Through Cricket.
       </h1>
 
-      <div class="hero-cta-group">
-        <a class="cta cta-primary" href="#DOWNLOAD">Download App</a>
-        <a class="cta cta-secondary" href="joincommunity.html">Join Community</a>
+      <p class="hero-subtitle">
+        Performance insights, community, and match tracking — in your pocket.
+      </p>
+
+      <div class="hero-store-badges">
+        <a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643" target="_blank" rel="noopener">
+          <img src="assets/Appstore.png" alt="Download on App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN" target="_blank" rel="noopener">
+          <img src="assets/googlestore.png" alt="Get it on Google Play" />
+        </a>
       </div>
 
       <div class="number-bg">01</div>
     </div>
 
-    <!-- HERO IMAGE SLIDESHOW -->
+    <!-- HERO PHONE MOCKUP -->
     <div class="hero-image">
-      <div class="slide slide1"></div>
-      <div class="slide slide2"></div>
-      <div class="slide slide3"></div>
-    </div>
-  </section>
-
-  <section id="ABOUT" class="abou-sec">
-    <div class="about-section-header">
-      <h2 class="section-title">About Matcha</h2>
-      <p class="section-subtitle">Advanced cricket analytics for players and coaches</p>
-    </div>
-    <div class="about-section">
-      <div class="image-section">
-        <img src="assets/Analysis.jpeg" alt="cricket-image" loading="lazy" />
-      </div>
-      <div class="c2-section">
-        <div class="ana-card">
-          <div class="icon-sec">
-            <img src="assets/ball_speed.png" alt="" loading="lazy" />
-          </div>
-          <div class="analysis-name">
-            <p>Ball speed</p>
-            <h5>65.7 km/h</h5>
-          </div>
-        </div>
-        <div class="ana-card">
-          <div class="icon-sec">
-            <img src="assets/ball_deviation.png" alt="" loading="lazy" />
-          </div>
-          <div class="analysis-name">
-            <p>Deviation</p>
-            <h5>1.0°</h5>
-          </div>
-        </div>
-        <div class="ana-card">
-          <div class="icon-sec">
-            <img src="assets/ball_swing.png" alt="" loading="lazy" />
-          </div>
-          <div class="analysis-name">
-            <p>Swing</p>
-            <h5>0.6°</h5>
-          </div>
-        </div>
-        <div class="ana-card">
-          <div class="icon-sec">
-            <img src="assets/ball_line_yellow.png" alt="" loading="lazy" />
-          </div>
-          <div class="analysis-name">
-            <p>Ball Line</p>
-            <h5>Outside Off</h5>
-          </div>
-        </div>
-        <div class="ana-card">
-          <div class="icon-sec">
-            <img src="assets/ball_length_red.png" alt="" loading="lazy" />
-          </div>
-          <div class="analysis-name">
-            <p>Ball Length</p>
-            <h5>Good</h5>
-          </div>
-        </div>
-      </div>
-      <div class="what-section">
-        <h3 class="what-is-matcha">What is <span>Matcha?</span></h3>
-        <p class="matcha-para">
-          Matcha is a cricket analysis application that helps players to harness their talent and enhance their skills
-          by measuring key batting and bowling parameters. It is extremely useful for coaches and academies.
-        </p>
-        <a class="btn" href="#FEATURES">VIEW MORE</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-section">
-    <div class="why-match">
-      <h3 class="why-title">WHY CHOOSE <span>MATCHA?</span></h3>
-    </div>
-
-    <div class="why-left">
-      <p class="why-para">
-        Matcha is the first-of-its-kind social platform built exclusively for
-        the cricketing community. Whether you're a player, coach, scout, or
-        fan, Matcha brings everyone together to connect, compete, and grow.
-      </p>
-
-      <ul class="why-list">
-        <li>Find Players & Teams</li>
-        <li>Get Noticed by Scouts</li>
-        <li>Engage with the Community</li>
-        <li>Join Tournaments & Matches</li>
-        <li>Showcase Your Cricket Journey</li>
-      </ul><br>
-      </ul>
-
-      <a class="btn why-btn" href="#FEATURES">VIEW MORE</a>
-    </div>
-
-    <div class="why-right">
-      <div class="image-wrapper">
-        <img src="assets/report.jpeg" alt="player" loading="lazy" />
-
-        <!-- floating cards -->
-        <div class="float-card top-card">
-          <div class="fc-title">
-            <div class="fc-name">
-              <img src="assets/Ball Speed.png" class="log-imges" alt="BALL SPEED" loading="lazy" />
-              <div class="name-t">
-                <h3>BALL SPEED</h3>
-                <p>Km/hr</p>
-              </div>
-            </div>
-          </div>
-          <div class="fc-values">
-            <div class="min-max-value">
-              <div class="min">
-                <p>Min</p>
-                <h4>72.8</h4>
-              </div>
-              <div class="max">
-                <p>Max</p>
-                <h4>84.1</h4>
-              </div>
-            </div>
-            <div class="fc-average">
-              <p>Average</p>
-              <h3>76.93</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="float-card bottom-card">
-          <div class="fc-title">
-            <div class="fc-name">
-              <img src="assets/Bowler speed.png" class="log-imges" alt="BALL HEIGHT" loading="lazy" />
-              <div class="name-t">
-                <h3>BALL HEIGHT</h3>
-                <p>M</p>
-              </div>
-            </div>
-          </div>
-          <div class="fc-values">
-            <div class="min-max-value">
-              <div class="min">
-                <p>Min</p>
-                <h4>1.72</h4>
-              </div>
-              <div class="max">
-                <p>Max</p>
-                <h4>2.1</h4>
-              </div>
-            </div>
-            <div class="fc-average">
-              <p>Average</p>
-              <h3>1.92</h3>
-            </div>
-          </div>
+      <div class="hero-phone-frame">
+        <div class="hero-phone-notch"></div>
+        <div class="hero-phone-screen-img">
+          <img src="assets/session-stats.png" alt="Matcha App" />
         </div>
       </div>
     </div>
   </section>
 
-  <section id="MATCHACENTER" class="match-center">
-    <div class="matcha-about-center">
-      <div class="m-center">
-          <h2>Match Center</h2>
-          <p>Live scores, momentum tracking, win probability and key moments for fans.</p>
+  <section id="WHYMATCHA" class="why-matcha-section">
+    <div class="why-matcha-header">
+      <h2 class="section-title">Why Matcha</h2>
+    </div>
+    
+    <!-- Top Section: Benefits and Features -->
+    <div class="why-matcha-top-container">
+      <!-- Benefits Div -->
+      <div class="why-matcha-div">
+        <h3 class="div-title">Benefits</h3>
+        <div class="why-matcha-benefits-list">
+          <div class="benefit-list-item">
+            <div class="benefit-list-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <p>Understand performance instantly</p>
+          </div>
+          <div class="benefit-list-item">
+            <div class="benefit-list-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>Stay engaged with every match</p>
+          </div>
+          <div class="benefit-list-item">
+            <div class="benefit-list-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <p>Simple, actionable insights</p>
+          </div>
+          <div class="benefit-list-item">
+            <div class="benefit-list-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <p>Share and compare with friends</p>
+          </div>
+        </div>
       </div>
-      <div class="match-center-features">
-        <div class="match-feature-card">
+
+      <!-- Features Div -->
+      <div class="why-matcha-div">
+        <h3 class="div-title">Features</h3>
+        <div class="why-matcha-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h4>Match Tracking</h4>
+            <p>Auto and manual match logging</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h4>Player Insights</h4>
+            <p>Trends, form and comparisons</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4>Community</h4>
+            <p>Follow teams & share highlights</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Match Center -->
+    <div class="why-matcha-matchcenter-section">
+      <h3 class="matchcenter-title">Match Center</h3>
+      <p class="matchcenter-intro-text">Live scores, momentum tracking, win probability and key moments for fans.</p>
+      <div class="matchcenter-cards-grid">
+        <div class="matchcenter-card">
           <h4>Live Scorecard</h4>
           <p>Ball-by-ball scoring presented clearly.</p>
         </div>
-        <div class="match-feature-card">
+        <div class="matchcenter-card">
           <h4>Win Probability</h4>
           <p>Dynamic chances updated every ball.</p>
         </div>
-        <div class="match-feature-card">
+        <div class="matchcenter-card">
           <h4>Match Momentum</h4>
           <p>Visualise the swing of the game.</p>
         </div>
-        <div class="match-feature-card">
+        <div class="matchcenter-card">
           <h4>Key Moments</h4>
           <p>Instant replays and notable events.</p>
         </div>
       </div>
-      <div class="match-center-cta">
-        <a href="#" class="cta-match-center">View Match Center</a>
-      </div>
+      <a href="#DOWNLOAD" class="matchcenter-cta-btn">View Match Center</a>
     </div>
   </section>
+
 
   <section class="fifth-section">
     <div class="left-content">
@@ -467,34 +386,22 @@
         <a class="btn btn-pro" href="joincommunity.html">Go Pro</a>
       </div>
 
-      <!-- COACH PLAN - Both Players and Coaches -->
-      <div class="plan-card plan-players plan-coaches">
+      <!-- COACH & CLUB PLAN - Coaches Only -->
+      <div class="plan-card plan-coaches">
         <div class="coming-soon-badge">Coming Soon</div>
-        <h3 class="plan-title">Coach</h3>
-        <p class="plan-description">For coaching & player development</p>
+        <h3 class="plan-title">Coach & Club</h3>
+        <p class="plan-description">For coaching, player development & organisations</p>
         <p class="price">Custom</p>
         <ul class="features">
           <li><i class="fa-solid fa-check"></i> Manage multiple players</li>
           <li><i class="fa-solid fa-check"></i> Player comparisons</li>
           <li><i class="fa-solid fa-check"></i> Training & progress tracking</li>
-          <li><i class="fa-solid fa-check"></i> Notes & session tagging</li>
-        </ul>
-        <a class="btn btn-coach" href="joincommunity.html">Notify Me</a>
-      </div>
-
-      <!-- CLUB PLAN - Both Players and Coaches -->
-      <div class="plan-card plan-players plan-coaches">
-        <div class="coming-soon-badge">Coming Soon</div>
-        <h3 class="plan-title">Club</h3>
-        <p class="plan-description">For clubs & organisations</p>
-        <p class="price">Custom</p>
-        <ul class="features">
           <li><i class="fa-solid fa-check"></i> Team & squad dashboards</li>
           <li><i class="fa-solid fa-check"></i> Competition Match Centers</li>
           <li><i class="fa-solid fa-check"></i> Admin & role controls</li>
           <li><i class="fa-solid fa-check"></i> Club-wide analytics</li>
         </ul>
-        <a class="btn btn-club" href="joincommunity.html">Contact Us</a>
+        <a class="btn btn-coach" href="joincommunity.html">Contact Us</a>
       </div>
     </div>
   </section>
@@ -558,37 +465,40 @@
 
   <footer id="CONTACT" class="footer-section">
     <div class="footer-container">
-
-      <!-- SOCIAL ICONS -->
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <!-- LOGO AND TAGLINE -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/logo-50.png" alt="Matcha Logo" />
+          <span class="footer-logo-text">MATCHA</span>
+        </div>
+        <p class="footer-tagline">Performance, insights & live match engagement.</p>
       </div>
 
-      <!-- COMPACT LINKS -->
+      <!-- FOOTER LINKS -->
       <div class="footer-links">
         <a href="about.html">About Us</a>
         <a href="privacypolicy.html">Privacy Policy</a>
-        <a href="terms&conditions.html">Terms & Conditions</a>
-        <!-- <a href="https://play.google.com/store/apps/details?id=com.matcha.android&hl=en_IN" target="_blank">
-          <img src="assets/googlestore.png" alt="Google Play" loading="lazy">
-        </a>
-        <a href="https://apps.apple.com/in/app/matcha-cricket-network/id6753956643" target="_blank">
-          <img src="assets/Appstore.png" alt="App Store" loading="lazy">
-        </a> -->
+        <a href="terms&conditions.html">Terms&Conditions</a>
+        <a href="#CONTACT" class="footer-contact-link">Contact</a>
       </div>
 
-      
+      <!-- SOCIAL ICONS -->
+      <div class="footer-social">
+        <h4 class="follow-us-text">Follow Us</h4>
+        <div class="social-icons-wrapper">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
-  </footer>
 
-  <section class="copy-right">
+    <!-- COPYRIGHT -->
     <div class="footer-bottom">
       <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
     </div>
-  </section>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

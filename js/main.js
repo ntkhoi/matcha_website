@@ -262,21 +262,17 @@ function initPricingTabs() {
             
             // Show/hide plans based on tab
             const allPlans = document.querySelectorAll('.plan-card');
-            allPlans.forEach(function(plan) {
+            allPlans.forEach(function(plan, index) {
                 if (tabType === 'players') {
-                    // Show all player plans
-                    if (plan.classList.contains('plan-players')) {
+                    // Show only first 2 cards (Free and Pro)
+                    if (index < 2) {
                         plan.style.display = 'block';
                     } else {
                         plan.style.display = 'none';
                     }
                 } else if (tabType === 'coaches') {
-                    // Show only coach and club plans
-                    if (plan.classList.contains('plan-coaches')) {
-                        plan.style.display = 'block';
-                    } else {
-                        plan.style.display = 'none';
-                    }
+                    // Show all 3 cards (Free, Pro, and Coach & Club)
+                    plan.style.display = 'block';
                 }
             });
         });

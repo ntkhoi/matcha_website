@@ -1,57 +1,46 @@
-// Match Details Page JavaScript
+// Highlights Page JavaScript
 
 // Match data based on match ID
-const matchDetailsData = {
-    'myanmar-bhutan': {
-        matchNumber: '1st Match',
-        title: 'Myanmar vs Bhutan',
-        team1: { name: 'Myanmar', abbrev: 'MYA', score: '145/3', overs: '18.3' },
-        team2: { name: 'Bhutan', abbrev: 'BHU', score: '98/5', overs: '15.2' },
-        series: 'International T20 Series 2025',
-        venue: 'Singapore Cricket Club',
-        time: '26th Dec 2025, 2:30 PM',
-        wormData: [0, 8, 18, 32, 48, 65, 82, 98, 115, 132, 145],
-        runRate: [8, 9, 9, 8, 9.6, 10.83, 11.71, 12.25, 12.78, 14.5]
-    },
-    'sylhet-rajshahi': {
-        matchNumber: '1st Match',
-        title: 'Sylhet Titans vs Rajshahi Warriors',
-        team1: { name: 'Sylhet Titans', abbrev: 'SLT', score: '45/1', overs: '5.6' },
-        team2: { name: 'Rajshahi Warriors', abbrev: 'RW', score: '0/0', overs: '0.0' },
-        series: 'Bangladesh Premier League 2025-26',
-        venue: 'Sylhet International Cricket Stadium',
-        time: '26th Dec 2025, 9:00 AM',
+const highlightsMatchData = {
+    'sydney-brisbane': {
+        group: 'Group C',
+        result: 'Maharashtra won by 8 wickets',
+        series: 'Vijay Hazare Trophy Elite 2025-26',
+        venue: 'KL Saini Ground',
+        date: '26th Dec 2025, 3:30 AM',
+        team1: { name: 'Maharashtra', abbrev: 'Mah' },
+        team2: { name: 'SIKKIM', abbrev: 'SK' },
         // Graph data - cumulative runs (worm graph)
-        wormData: [0, 5, 11, 23, 35, 38, 45],
+        wormData: [0, 5, 35, 60, 105, 125, 150, 200],
         // Run rate per over
-        runRate: [5, 5.5, 7.67, 9, 7, 7.5]
+        runRate: [3, 7.25, 8.75, 9.75, 8.75, 10.25, 9.25, 9.25, 10]
+    },
+    'melbourne-hobart': {
+        group: 'Group A',
+        result: 'Hobart won by 5 wickets',
+        series: 'Big Bash League 2025-26',
+        venue: 'Melbourne Cricket Ground',
+        date: '26th Dec 2025, 2:00 PM',
+        team1: { name: 'Melbourne', abbrev: 'MEL' },
+        team2: { name: 'Hobart', abbrev: 'HOB' },
+        wormData: [0, 12, 28, 45, 62, 80, 98, 115, 132, 150, 170, 189],
+        runRate: [6, 6, 7, 7.5, 7.75, 8, 8.17, 8.25, 8.33, 8.5, 8.64, 8.68]
     },
     'gulfgiants-dubai': {
-        matchNumber: '2nd Match',
-        title: 'Gulf Giants vs Dubai',
-        team1: { name: 'Gulf Giants', abbrev: 'GG', score: '201/4', overs: '15.2' },
-        team2: { name: 'Dubai', abbrev: 'DU', score: '156/2', overs: '12.5' },
+        group: 'Group B',
+        result: 'Gulf Giants won by 17 runs',
         series: 'T20 League 2025',
         venue: 'Dubai International Stadium',
-        time: '26th Dec 2025, 2:00 PM',
-        wormData: [0, 8, 18, 35, 52, 68, 85, 102, 118, 135, 150, 165, 180, 195, 201],
-        runRate: [8, 9, 9, 8.75, 10.4, 11.33, 12.14, 12.75, 13.11, 13.5, 13.64, 13.75, 13.85, 13.93, 13.4]
-    },
-    'mumbai-delhi': {
-        matchNumber: '3rd Match',
-        title: 'Mumbai Indians vs Delhi',
-        team1: { name: 'Mumbai Indians', abbrev: 'MI', score: '178/6', overs: '19.1' },
-        team2: { name: 'Delhi', abbrev: 'DL', score: '142/8', overs: '18.0' },
-        series: 'IPL 2025',
-        venue: 'Wankhede Stadium',
-        time: '26th Dec 2025, 7:30 PM',
-        wormData: [0, 12, 25, 38, 52, 65, 78, 92, 105, 118, 132, 145, 158, 170, 178],
-        runRate: [12, 12.5, 12.67, 12.75, 13, 13.17, 13.29, 13.13, 13.11, 13.2, 13.18, 13.25, 13.08, 12.86, 12.67]
+        date: '26th Dec 2025, 7:30 PM',
+        team1: { name: 'Gulf Giants', abbrev: 'GG' },
+        team2: { name: 'Dubai', abbrev: 'DU' },
+        wormData: [0, 8, 18, 35, 52, 68, 85, 102, 118, 135, 150, 165, 180, 195, 201, 218],
+        runRate: [8, 9, 9, 8.75, 10.4, 11.33, 12.14, 12.75, 13.11, 13.5, 13.64, 13.75, 13.85, 13.93, 13.4, 10.9]
     }
 };
 
-// Draw Worm Graph
-function drawWormGraph(canvas, data) {
+// Draw Worm Graph (Improved styling)
+function drawWormGraphHighlights(canvas, data) {
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
     const height = canvas.height;
@@ -156,8 +145,8 @@ function drawWormGraph(canvas, data) {
     }
 }
 
-// Draw Run Rate Graph
-function drawRunRateGraph(canvas, data) {
+// Draw Run Rate Graph (Improved styling)
+function drawRunRateGraphHighlights(canvas, data) {
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
     const height = canvas.height;
@@ -256,35 +245,32 @@ function drawRunRateGraph(canvas, data) {
     }
 }
 
-// Initialize match details page
+// Initialize highlights page
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const matchId = urlParams.get('match') || 'myanmar-bhutan';
-    const match = matchDetailsData[matchId] || matchDetailsData['myanmar-bhutan'];
+    const matchId = urlParams.get('match') || 'sydney-brisbane';
+    const match = highlightsMatchData[matchId] || highlightsMatchData['sydney-brisbane'];
 
     // Update page content
-    document.getElementById('match-number').textContent = match.matchNumber;
-    document.getElementById('match-title').textContent = match.title;
+    document.getElementById('match-group').textContent = match.group;
+    document.getElementById('match-result').textContent = match.result;
     document.getElementById('match-series').textContent = match.series;
     document.getElementById('match-venue').textContent = match.venue;
-    document.getElementById('match-time').textContent = match.time;
-
-    // Update score summary
-    document.getElementById('team-abbrev').textContent = match.team1.abbrev;
-    document.getElementById('current-score').textContent = match.team1.score;
-    document.getElementById('current-overs').textContent = `(${match.team1.overs} ov)`;
+    document.getElementById('match-date').textContent = match.date;
 
     // Update teams
-    document.getElementById('team1-name').textContent = match.team1.name;
-    document.getElementById('team2-name').textContent = match.team2.name;
+    document.getElementById('team1-abbrev').textContent = match.team1.abbrev;
+    document.getElementById('team1-name-full').textContent = match.team1.name;
+    document.getElementById('team2-abbrev').textContent = match.team2.abbrev;
+    document.getElementById('team2-name-full').textContent = match.team2.name;
 
-    // Update legends
-    document.getElementById('legend-team').textContent = match.team1.name + ' 1st';
-    document.getElementById('legend-team-3').textContent = match.team1.name + ' 1st';
+    // Update legends (using first team name)
+    document.getElementById('legend-team-name').textContent = match.team1.name + ' 1st';
+    document.getElementById('legend-team-name-2').textContent = match.team1.name + ' 1st';
 
     // Draw graphs
-    const wormCanvas = document.getElementById('worm-graph-canvas');
-    const runRateCanvas = document.getElementById('run-rate-canvas');
+    const wormCanvas = document.getElementById('worm-graph-highlights');
+    const runRateCanvas = document.getElementById('run-rate-graph-highlights');
 
     // Set canvas dimensions
     function setCanvasSize(canvas) {
@@ -297,14 +283,15 @@ document.addEventListener('DOMContentLoaded', function() {
     setCanvasSize(runRateCanvas);
 
     // Draw graphs
-    drawWormGraph(wormCanvas, match.wormData);
-    drawRunRateGraph(runRateCanvas, match.runRate);
+    drawWormGraphHighlights(wormCanvas, match.wormData);
+    drawRunRateGraphHighlights(runRateCanvas, match.runRate);
 
     // Redraw on resize
     window.addEventListener('resize', function() {
         setCanvasSize(wormCanvas);
         setCanvasSize(runRateCanvas);
-        drawWormGraph(wormCanvas, match.wormData);
-        drawRunRateGraph(runRateCanvas, match.runRate);
+        drawWormGraphHighlights(wormCanvas, match.wormData);
+        drawRunRateGraphHighlights(runRateCanvas, match.runRate);
     });
 });
+

@@ -37,175 +37,95 @@
         </nav>
     </header>
 
-    <!-- Highlights Hero -->
-    <section class="highlights-hero">
-        <div class="highlights-hero-content">
-            <a href="matchcenter.html" class="back-link">
+    <!-- Highlights Page -->
+    <section class="highlights-page">
+        <div class="highlights-container">
+            <!-- Back Button -->
+            <a href="matchcenter.html" class="back-btn-highlights">
                 <i class="fas fa-arrow-left"></i>
-                <span>Back to Match Center</span>
+                <span>Back</span>
             </a>
-            <h1>Match Highlights</h1>
-            <p id="match-title">Sydney vs Brisbane - Big Bash League</p>
-        </div>
-    </section>
 
-    <!-- Match Summary -->
-    <section class="match-summary-section">
-        <div class="highlights-container">
-            <div class="match-summary-card">
-                <div class="summary-header">
-                    <div class="match-result-badge">
+            <!-- Match Title Section -->
+            <div class="highlights-title-section">
+                <h1 id="match-group">Group C</h1>
+                <div class="result-badge-highlights">
+                    <i class="fas fa-check-circle"></i>
+                    <span id="match-result">Maharashtra won by 8 wickets</span>
+                </div>
+            </div>
+
+            <!-- Match Info Card -->
+            <div class="match-info-card-highlights">
+                <div class="info-item-highlights">
+                    <div class="info-icon-highlights">
                         <i class="fas fa-trophy"></i>
-                        <span>Sydney won by 47 runs</span>
                     </div>
-                    <div class="match-date">Dec 10, 2024</div>
-                </div>
-                
-                <div class="teams-summary">
-                    <div class="team-summary winner">
-                        <div class="team-logo-large">SY</div>
-                        <h3>Sydney</h3>
-                        <div class="team-score-large">245/8</div>
-                        <p class="overs">50.0 Overs</p>
-                    </div>
-                    <div class="vs-large">VS</div>
-                    <div class="team-summary">
-                        <div class="team-logo-large">BR</div>
-                        <h3>Brisbane</h3>
-                        <div class="team-score-large">198/10</div>
-                        <p class="overs">45.3 Overs</p>
+                    <div class="info-content-highlights">
+                        <span class="info-label-highlights">SERIES</span>
+                        <span class="info-value-highlights" id="match-series">Vijay Hazare Trophy Elite 2025-26</span>
                     </div>
                 </div>
-
-                <div class="match-venue-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Sydney Cricket Ground</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Highlights -->
-    <section class="highlights-content-section">
-        <div class="highlights-container">
-            <h2 class="section-title">Key Highlights</h2>
-
-            <!-- Highlight Item 1 -->
-            <div class="highlight-item-card">
-                <div class="highlight-thumbnail">
-                    <div class="play-button-overlay">
-                        <i class="fas fa-play"></i>
+                <div class="info-item-highlights">
+                    <div class="info-icon-highlights">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <img src="assets/SydneyVSBrish.jpg" alt="Top Scorer" loading="lazy">
-                    <div class="highlight-badge">Top Scorer</div>
+                    <div class="info-content-highlights">
+                        <span class="info-label-highlights">VENUE</span>
+                        <span class="info-value-highlights" id="match-venue">KL Saini Ground</span>
+                    </div>
                 </div>
-                <div class="highlight-info">
-                    <h3>J. Smith - 89 Runs</h3>
-                    <p>Outstanding batting performance by J. Smith, scoring 89 runs off 67 balls including 8 fours and 3 sixes.</p>
-                    <div class="highlight-stats">
-                        <span><i class="fas fa-clock"></i> 12:45 PM</span>
-                        <span><i class="fas fa-eye"></i> 1.2K views</span>
+                <div class="info-item-highlights">
+                    <div class="info-icon-highlights">
+                        <i class="far fa-calendar"></i>
+                    </div>
+                    <div class="info-content-highlights">
+                        <span class="info-label-highlights">DATE</span>
+                        <span class="info-value-highlights" id="match-date">26th Dec 2025, 3:30 AM</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Highlight Item 2 -->
-            <div class="highlight-item-card">
-                <div class="highlight-thumbnail">
-                    <div class="play-button-overlay">
-                        <i class="fas fa-play"></i>
+            <!-- Team Comparison Section -->
+            <div class="teams-comparison-section">
+                <div class="team-logo-comparison">
+                    <div class="team-circle-left">
+                        <div class="team-abbrev-circle" id="team1-abbrev">Mah</div>
+                        <div class="team-name-small" id="team1-name-full">Maharashtra</div>
                     </div>
-                    <img src="assets/bowlingClip.jpeg" alt="Best Bowler" loading="lazy">
-                    <div class="highlight-badge">Best Bowler</div>
-                </div>
-                <div class="highlight-info">
-                    <h3>M. Johnson - 4/32</h3>
-                    <p>Brilliant bowling spell by M. Johnson, taking 4 crucial wickets for just 32 runs in 10 overs.</p>
-                    <div class="highlight-stats">
-                        <span><i class="fas fa-clock"></i> 1:15 PM</span>
-                        <span><i class="fas fa-eye"></i> 956 views</span>
+                    <div class="vs-text-comparison">VS</div>
+                    <div class="team-circle-right">
+                        <div class="team-abbrev-circle" id="team2-abbrev">SK</div>
+                        <div class="team-name-small" id="team2-name-full">SIKKIM</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Highlight Item 3 -->
-            <div class="highlight-item-card">
-                <div class="highlight-thumbnail">
-                    <div class="play-button-overlay">
-                        <i class="fas fa-play"></i>
+            <!-- Worm Graph Card -->
+            <div class="graph-card-highlights">
+                <div class="graph-header">
+                    <h3 class="graph-title">Worm Graph</h3>
+                    <div class="graph-legend-highlights">
+                        <div class="legend-line-highlights green-line"></div>
+                        <span id="legend-team-name">Auckland 1st</span>
                     </div>
-                    <img src="assets/MyanmarVSBhutan.jpg" alt="Match Winning Moment" loading="lazy">
-                    <div class="highlight-badge">Match Winner</div>
                 </div>
-                <div class="highlight-info">
-                    <h3>Match Winning Moment</h3>
-                    <p>The decisive moment when Sydney sealed the victory with a stunning catch in the deep.</p>
-                    <div class="highlight-stats">
-                        <span><i class="fas fa-clock"></i> 2:30 PM</span>
-                        <span><i class="fas fa-eye"></i> 2.1K views</span>
-                    </div>
+                <div class="graph-container-highlights">
+                    <canvas id="worm-graph-highlights"></canvas>
                 </div>
             </div>
 
-            <!-- Highlight Item 4 -->
-            <div class="highlight-item-card">
-                <div class="highlight-thumbnail">
-                    <div class="play-button-overlay">
-                        <i class="fas fa-play"></i>
-                    </div>
-                    <img src="assets/MIvsDy.jpg" alt="Six of the Match" loading="lazy">
-                    <div class="highlight-badge">Six of the Match</div>
-                </div>
-                <div class="highlight-info">
-                    <h3>Massive Six by J. Smith</h3>
-                    <p>A spectacular six that sailed over the boundary, one of the longest hits of the match.</p>
-                    <div class="highlight-stats">
-                        <span><i class="fas fa-clock"></i> 12:58 PM</span>
-                        <span><i class="fas fa-eye"></i> 1.8K views</span>
+            <!-- Run Rate Card -->
+            <div class="graph-card-highlights">
+                <div class="graph-header">
+                    <h3 class="graph-title">Run Rate</h3>
+                    <div class="graph-legend-highlights">
+                        <div class="legend-line-highlights green-line"></div>
+                        <span id="legend-team-name-2">Auckland 1st</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Match Statistics -->
-    <section class="match-stats-section">
-        <div class="highlights-container">
-            <h2 class="section-title">Match Statistics</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h4>Highest Partnership</h4>
-                    <p class="stat-value">142 runs</p>
-                    <p class="stat-detail">J. Smith & A. Warner</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-bowling-ball"></i>
-                    </div>
-                    <h4>Best Bowling</h4>
-                    <p class="stat-value">4/32</p>
-                    <p class="stat-detail">M. Johnson</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Man of the Match</h4>
-                    <p class="stat-value">J. Smith</p>
-                    <p class="stat-detail">89 runs</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h4>Run Rate</h4>
-                    <p class="stat-value">4.90</p>
-                    <p class="stat-detail">Sydney</p>
+                <div class="graph-container-highlights">
+                    <canvas id="run-rate-graph-highlights"></canvas>
                 </div>
             </div>
         </div>
@@ -238,164 +158,7 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Match data based on match ID
-        const matchData = {
-            'sydney-brisbane': {
-                title: 'Sydney vs Brisbane - Big Bash League',
-                result: 'Sydney won by 47 runs',
-                date: 'Dec 10, 2024',
-                venue: 'Sydney Cricket Ground',
-                team1: { name: 'Sydney', score: '245/8', overs: '50.0 Overs', logo: 'SY', winner: true },
-                team2: { name: 'Brisbane', score: '198/10', overs: '45.3 Overs', logo: 'BR', winner: false },
-                highlights: [
-                    { title: 'J. Smith - 89 Runs', description: 'Outstanding batting performance by J. Smith, scoring 89 runs off 67 balls including 8 fours and 3 sixes.', badge: 'Top Scorer', image: 'assets/SydneyVSBrish.jpg' },
-                    { title: 'M. Johnson - 4/32', description: 'Brilliant bowling spell by M. Johnson, taking 4 crucial wickets for just 32 runs in 10 overs.', badge: 'Best Bowler', image: 'assets/bowlingClip.jpeg' },
-                    { title: 'Match Winning Moment', description: 'The decisive moment when Sydney sealed the victory with a stunning catch in the deep.', badge: 'Match Winner', image: 'assets/MyanmarVSBhutan.jpg' },
-                    { title: 'Massive Six by J. Smith', description: 'A spectacular six that sailed over the boundary, one of the longest hits of the match.', badge: 'Six of the Match', image: 'assets/MIvsDy.jpg' }
-                ],
-                stats: {
-                    partnership: { value: '142 runs', detail: 'J. Smith & A. Warner' },
-                    bowling: { value: '4/32', detail: 'M. Johnson' },
-                    motm: { value: 'J. Smith', detail: '89 runs' },
-                    runRate: { value: '4.90', detail: 'Sydney' }
-                }
-            },
-            'melbourne-hobart': {
-                title: 'Melbourne vs Hobart - Big Bash League',
-                result: 'Hobart won by 5 wickets',
-                date: 'Dec 8, 2024',
-                venue: 'Melbourne Cricket Ground',
-                team1: { name: 'Melbourne', score: '189/7', overs: '50.0 Overs', logo: 'ME', winner: false },
-                team2: { name: 'Hobart', score: '192/5', overs: '48.2 Overs', logo: 'HO', winner: true },
-                highlights: [
-                    { title: 'R. Kumar - 76 Runs', description: 'Excellent batting display by R. Kumar, scoring 76 runs with precision and timing.', badge: 'Top Scorer', image: 'assets/melbourceVShor.png' },
-                    { title: 'A. Patel - 3/28', description: 'Outstanding bowling performance by A. Patel, taking 3 important wickets.', badge: 'Best Bowler', image: 'assets/bowlingClip.jpeg' },
-                    { title: 'Hobart Victory', description: 'Hobart clinched the match with a brilliant finish in the final overs.', badge: 'Match Winner', image: 'assets/melbourceVShor.png' }
-                ],
-                stats: {
-                    partnership: { value: '98 runs', detail: 'R. Kumar & S. Singh' },
-                    bowling: { value: '3/28', detail: 'A. Patel' },
-                    motm: { value: 'R. Kumar', detail: '76 runs' },
-                    runRate: { value: '3.96', detail: 'Hobart' }
-                }
-            },
-            'gulf-dubai': {
-                title: 'Gulf Giants vs Dubai - T20 League',
-                result: 'Gulf Giants won by 17 runs',
-                date: 'Dec 5, 2024',
-                venue: 'Dubai International Stadium',
-                team1: { name: 'Gulf Giants', score: '218/4', overs: '20.0 Overs', logo: 'GG', winner: true },
-                team2: { name: 'Dubai', score: '201/9', overs: '20.0 Overs', logo: 'DU', winner: false },
-                highlights: [
-                    { title: 'K. Ahmed - 102 Runs', description: 'Century by K. Ahmed in just 58 balls, a masterclass in T20 batting.', badge: 'Top Scorer', image: 'assets/GulfgaintVSDubai.png' },
-                    { title: 'S. Khan - 3/35', description: 'Crucial bowling performance by S. Khan that turned the match in Gulf Giants favor.', badge: 'Best Bowler', image: 'assets/bowlingClip.jpeg' },
-                    { title: 'Century Celebration', description: 'The moment K. Ahmed reached his century, a standing ovation from the crowd.', badge: 'Century', image: 'assets/GulfgaintVSDubai.png' }
-                ],
-                stats: {
-                    partnership: { value: '156 runs', detail: 'K. Ahmed & M. Ali' },
-                    bowling: { value: '3/35', detail: 'S. Khan' },
-                    motm: { value: 'K. Ahmed', detail: '102 runs' },
-                    runRate: { value: '10.90', detail: 'Gulf Giants' }
-                }
-            }
-        };
-
-        // Get match ID from URL parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const matchId = urlParams.get('match') || 'sydney-brisbane';
-        const match = matchData[matchId] || matchData['sydney-brisbane'];
-
-        // Update page content based on match data
-        function updateMatchContent() {
-            // Update title
-            document.getElementById('match-title').textContent = match.title;
-            
-            // Update match summary
-            document.querySelector('.match-result-badge span').textContent = match.result;
-            document.querySelector('.match-date').textContent = match.date;
-            document.querySelector('.match-venue-info p').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${match.venue}`;
-            
-            // Update teams
-            const teams = document.querySelectorAll('.team-summary');
-            teams[0].querySelector('.team-logo-large').textContent = match.team1.logo;
-            teams[0].querySelector('h3').textContent = match.team1.name;
-            teams[0].querySelector('.team-score-large').textContent = match.team1.score;
-            teams[0].querySelector('.overs').textContent = match.team1.overs;
-            if (match.team1.winner) {
-                teams[0].classList.add('winner');
-                teams[1].classList.remove('winner');
-            }
-            
-            teams[1].querySelector('.team-logo-large').textContent = match.team2.logo;
-            teams[1].querySelector('h3').textContent = match.team2.name;
-            teams[1].querySelector('.team-score-large').textContent = match.team2.score;
-            teams[1].querySelector('.overs').textContent = match.team2.overs;
-            if (match.team2.winner) {
-                teams[1].classList.add('winner');
-                teams[0].classList.remove('winner');
-            }
-            
-            // Update highlights
-            const highlightsContainer = document.querySelector('.highlights-content-section .highlights-container');
-            const highlightsHTML = match.highlights.map((highlight, index) => `
-                <div class="highlight-item-card">
-                    <div class="highlight-thumbnail">
-                        <div class="play-button-overlay">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        <img src="${highlight.image}" alt="${highlight.title}" loading="lazy">
-                        <div class="highlight-badge">${highlight.badge}</div>
-                    </div>
-                    <div class="highlight-info">
-                        <h3>${highlight.title}</h3>
-                        <p>${highlight.description}</p>
-                        <div class="highlight-stats">
-                            <span><i class="fas fa-clock"></i> ${12 + index}:${30 + index * 5} PM</span>
-                            <span><i class="fas fa-eye"></i> ${(1.2 + index * 0.3).toFixed(1)}K views</span>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-            
-            highlightsContainer.innerHTML = `
-                <h2 class="section-title">Key Highlights</h2>
-                ${highlightsHTML}
-            `;
-            
-            // Update stats
-            const statCards = document.querySelectorAll('.stat-card');
-            statCards[0].querySelector('.stat-value').textContent = match.stats.partnership.value;
-            statCards[0].querySelector('.stat-detail').textContent = match.stats.partnership.detail;
-            
-            statCards[1].querySelector('.stat-value').textContent = match.stats.bowling.value;
-            statCards[1].querySelector('.stat-detail').textContent = match.stats.bowling.detail;
-            
-            statCards[2].querySelector('.stat-value').textContent = match.stats.motm.value;
-            statCards[2].querySelector('.stat-detail').textContent = match.stats.motm.detail;
-            
-            statCards[3].querySelector('.stat-value').textContent = match.stats.runRate.value;
-            statCards[3].querySelector('.stat-detail').textContent = match.stats.runRate.detail;
-            
-            // Re-attach play button listeners
-            attachPlayButtonListeners();
-        }
-
-        // Attach play button functionality
-        function attachPlayButtonListeners() {
-            document.querySelectorAll('.play-button-overlay').forEach(button => {
-                button.addEventListener('click', function() {
-                    const highlightCard = this.closest('.highlight-item-card');
-                    const highlightTitle = highlightCard.querySelector('h3').textContent;
-                    // In a real application, this would open a video player
-                    alert(`Playing highlight: ${highlightTitle}\n\nIn production, this would open a video player with the highlight video.`);
-                });
-            });
-        }
-
-        // Initialize page
-        updateMatchContent();
-    </script>
+    <script src="js/highlights.js"></script>
 </body>
 </html>
 

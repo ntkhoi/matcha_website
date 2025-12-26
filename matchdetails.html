@@ -37,193 +37,129 @@
         </nav>
     </header>
 
-    <!-- Match Details Hero -->
-    <section class="match-details-hero">
-        <div class="match-details-hero-content">
-            <a href="matchcenter.html" class="back-link">
+    <!-- Match Details Page -->
+    <section class="match-details-page">
+        <div class="match-details-container">
+            <!-- Back Button -->
+            <a href="matchcenter.html" class="back-btn-details">
                 <i class="fas fa-arrow-left"></i>
-                <span>Back to Match Center</span>
+                <span>Back</span>
             </a>
-            <div class="live-indicator">
-                <span class="live-dot"></span>
-                <span>LIVE</span>
-            </div>
-            <h1 id="match-title">Myanmar vs Bhutan</h1>
-            <p id="match-tournament">International T20 Series</p>
-        </div>
-    </section>
 
-    <!-- Live Score Section -->
-    <section class="live-score-section">
-        <div class="match-details-container">
-            <div class="score-card">
-                <div class="team-score-card">
-                    <div class="team-info-large">
-                        <div class="team-logo-circle">MY</div>
-                        <h2>Myanmar</h2>
-                    </div>
-                    <div class="score-large" id="team1-score">145/3</div>
-                    <div class="overs-info" id="team1-overs">18.3 Overs</div>
-                </div>
-
-                <div class="vs-divider">VS</div>
-
-                <div class="team-score-card">
-                    <div class="team-info-large">
-                        <div class="team-logo-circle">BH</div>
-                        <h2>Bhutan</h2>
-                    </div>
-                    <div class="score-large" id="team2-score">98/5</div>
-                    <div class="overs-info" id="team2-overs">15.2 Overs</div>
+            <!-- Match Title Section -->
+            <div class="match-title-section-details">
+                <h1 id="match-number">1st Match</h1>
+                <div class="live-badge-details">
+                    <i class="fas fa-circle"></i>
+                    <span>Live</span>
                 </div>
             </div>
 
-            <!-- Match Info -->
-            <div class="match-info-card">
-                <div class="info-row">
-                    <span class="info-label"><i class="fas fa-map-marker-alt"></i> Venue</span>
-                    <span class="info-value" id="match-venue">Singapore Cricket Club</span>
+            <!-- Match Info Card -->
+            <div class="match-info-card-details">
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">MATCH</span>
+                        <span class="info-value-details" id="match-title">Sylhet Titans vs Rajshahi Warriors</span>
+                    </div>
                 </div>
-                <div class="info-row">
-                    <span class="info-label"><i class="far fa-calendar"></i> Date</span>
-                    <span class="info-value" id="match-date">Today, Dec 14, 2024</span>
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">SERIES</span>
+                        <span class="info-value-details" id="match-series">Bangladesh Premier League 2025-26</span>
+                    </div>
                 </div>
-                <div class="info-row">
-                    <span class="info-label"><i class="far fa-clock"></i> Started</span>
-                    <span class="info-value" id="match-time">2:30 PM</span>
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">VENUE</span>
+                        <span class="info-value-details" id="match-venue">Sylhet International Cricket Stadium</span>
+                    </div>
                 </div>
-                <div class="info-row">
-                    <span class="info-label"><i class="fas fa-trophy"></i> Format</span>
-                    <span class="info-value">T20</span>
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">START TIME</span>
+                        <span class="info-value-details" id="match-time">26th Dec 2025, 9:00 AM</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Live Stats Section -->
-    <section class="live-stats-section">
-        <div class="match-details-container">
-            <h2 class="section-title">Live Statistics</h2>
-            
-            <div class="stats-cards-grid">
-                <div class="stat-card-large">
-                    <div class="stat-icon-large">
-                        <i class="fas fa-chart-line"></i>
+            <!-- Score Summary Card -->
+            <div class="score-summary-card">
+                <div class="score-summary-left">
+                    <div class="team-abbrev">
+                        <span class="team-dot"></span>
+                        <span id="team-abbrev">SLT</span>
                     </div>
-                    <h3>Win Probability</h3>
-                    <div class="stat-value-large" id="win-probability">Myanmar 78%</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 78%"></div>
+                    <div class="innings-label">1ST INNINGS</div>
+                </div>
+                <div class="score-summary-right">
+                    <div class="score-large-summary" id="current-score">45/1</div>
+                    <div class="overs-summary" id="current-overs">(5.6 ov)</div>
+                </div>
+            </div>
+
+            <!-- Teams Card -->
+            <div class="teams-card">
+                <div class="card-header">
+                    <div class="card-icon purple">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <span class="card-title">Teams</span>
+                </div>
+                <div class="teams-display">
+                    <span class="team-name-left" id="team1-name">Sylhet Titans</span>
+                    <span class="vs-text-teams">VS</span>
+                    <span class="team-name-right" id="team2-name">Rajshahi Warriors</span>
+                </div>
+            </div>
+
+            <!-- Worm Graph Card -->
+            <div class="worm-graph-card">
+                <div class="card-header">
+                    <div class="card-icon green">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <span class="card-title">Worm Graph</span>
+                </div>
+                <div class="graph-legend">
+                    <div class="legend-item">
+                        <div class="legend-line green-line"></div>
+                        <span id="legend-team">Sylhet Titans 1st</span>
                     </div>
                 </div>
+                <div class="graph-container">
+                    <canvas id="worm-graph-canvas"></canvas>
+                </div>
+            </div>
 
-                <div class="stat-card-large">
-                    <div class="stat-icon-large">
+            <!-- Run Rate Card -->
+            <div class="run-rate-card">
+                <div class="card-header">
+                    <div class="card-icon orange">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
-                    <h3>Current Run Rate</h3>
-                    <div class="stat-value-large" id="run-rate">7.89</div>
-                    <p class="stat-detail">Required: 8.5</p>
+                    <span class="card-title">Run Rate</span>
                 </div>
-
-                <div class="stat-card-large">
-                    <div class="stat-icon-large">
-                        <i class="fas fa-arrow-up"></i>
-                    </div>
-                    <h3>Momentum</h3>
-                    <div class="stat-value-large momentum-text">↗ Favoring Myanmar</div>
-                    <p class="stat-detail">Strong batting performance</p>
-                </div>
-
-                <div class="stat-card-large">
-                    <div class="stat-icon-large">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Target</h3>
-                    <div class="stat-value-large" id="target">146 runs</div>
-                    <p class="stat-detail">From 20 overs</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recent Overs Section -->
-    <section class="recent-overs-section">
-        <div class="match-details-container">
-            <h2 class="section-title">Recent Overs</h2>
-            <div class="overs-timeline">
-                <div class="over-item">
-                    <div class="over-number">18</div>
-                    <div class="over-details">
-                        <div class="over-runs">12 runs</div>
-                        <div class="over-balls">1 4 1 4 1 1</div>
+                <div class="graph-legend">
+                    <div class="legend-item">
+                        <div class="legend-line green-line"></div>
+                        <span id="legend-team-3">Sylhet Titans 1st</span>
                     </div>
                 </div>
-                <div class="over-item">
-                    <div class="over-number">17</div>
-                    <div class="over-details">
-                        <div class="over-runs">8 runs</div>
-                        <div class="over-balls">1 2 1 1 2 1</div>
-                    </div>
-                </div>
-                <div class="over-item">
-                    <div class="over-number">16</div>
-                    <div class="over-details">
-                        <div class="over-runs">15 runs</div>
-                        <div class="over-balls">4 1 6 1 2 1</div>
-                    </div>
-                </div>
-                <div class="over-item">
-                    <div class="over-number">15</div>
-                    <div class="over-details">
-                        <div class="over-runs">6 runs</div>
-                        <div class="over-balls">1 1 1 1 1 1</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Players Section -->
-    <section class="key-players-section">
-        <div class="match-details-container">
-            <h2 class="section-title">Key Players</h2>
-            <div class="players-grid">
-                <div class="player-card">
-                    <div class="player-avatar">JS</div>
-                    <h4>J. Smith</h4>
-                    <p class="player-role">Batsman</p>
-                    <div class="player-stats">
-                        <span class="stat">65* (45)</span>
-                        <span class="stat">SR: 144.4</span>
-                    </div>
-                </div>
-                <div class="player-card">
-                    <div class="player-avatar">AW</div>
-                    <h4>A. Warner</h4>
-                    <p class="player-role">Batsman</p>
-                    <div class="player-stats">
-                        <span class="stat">42 (38)</span>
-                        <span class="stat">SR: 110.5</span>
-                    </div>
-                </div>
-                <div class="player-card">
-                    <div class="player-avatar">MJ</div>
-                    <h4>M. Johnson</h4>
-                    <p class="player-role">Bowler</p>
-                    <div class="player-stats">
-                        <span class="stat">2/28 (4)</span>
-                        <span class="stat">Econ: 7.0</span>
-                    </div>
-                </div>
-                <div class="player-card">
-                    <div class="player-avatar">RK</div>
-                    <h4>R. Kumar</h4>
-                    <p class="player-role">Bowler</p>
-                    <div class="player-stats">
-                        <span class="stat">1/25 (3.3)</span>
-                        <span class="stat">Econ: 7.1</span>
-                    </div>
+                <div class="graph-container">
+                    <canvas id="run-rate-canvas"></canvas>
                 </div>
             </div>
         </div>
@@ -259,4 +195,5 @@
     <script src="js/matchdetails.js"></script>
 </body>
 </html>
+
 

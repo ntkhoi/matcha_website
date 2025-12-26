@@ -495,25 +495,39 @@
             const tabs = document.querySelectorAll('.match-tab');
             const contents = document.querySelectorAll('.match-content');
 
+            // Function to switch tabs
+            function switchTab(targetTab) {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to target tab
+                const tabElement = document.querySelector(`.match-tab[data-tab="${targetTab}"]`);
+                if (tabElement) {
+                    tabElement.classList.add('active');
+                }
+
+                // Show corresponding content
+                if (targetTab === 'live') {
+                    document.getElementById('live-matches').classList.add('active');
+                } else if (targetTab === 'upcoming') {
+                    document.getElementById('upcoming-matches').classList.add('active');
+                } else if (targetTab === 'recent') {
+                    document.getElementById('recent-matches').classList.add('active');
+                }
+            }
+
+            // Check URL parameter for tab
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+            if (tabParam && (tabParam === 'live' || tabParam === 'upcoming' || tabParam === 'recent')) {
+                switchTab(tabParam);
+            }
+
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     const targetTab = this.dataset.tab;
-
-                    // Remove active class from all tabs and contents
-                    tabs.forEach(t => t.classList.remove('active'));
-                    contents.forEach(c => c.classList.remove('active'));
-
-                    // Add active class to clicked tab
-                    this.classList.add('active');
-
-                    // Show corresponding content
-                    if (targetTab === 'live') {
-                        document.getElementById('live-matches').classList.add('active');
-                    } else if (targetTab === 'upcoming') {
-                        document.getElementById('upcoming-matches').classList.add('active');
-                    } else if (targetTab === 'recent') {
-                        document.getElementById('recent-matches').classList.add('active');
-                    }
+                    switchTab(targetTab);
                 });
             });
 

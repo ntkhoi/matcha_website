@@ -1,0 +1,645 @@
+/* ===============================
+   MATCH CENTER PAGE STYLES
+   =============================== */
+
+/* Match Center Hero */
+.matchcenter-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    padding: 120px 20px 80px;
+    text-align: center;
+    color: white;
+    margin-top: var(--nav-height);
+}
+
+.matchcenter-hero-content h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.matchcenter-hero-content p {
+    font-size: clamp(16px, 2vw, 20px);
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+
+/* Match Center Tabs Section */
+.matchcenter-tabs-section {
+    background: #f6f6f6;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* Match Center Container */
+.matchcenter-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Match Tabs */
+.match-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.match-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.match-tab i {
+    font-size: 12px;
+}
+
+.match-tab.active {
+    background: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+    box-shadow: 0 4px 12px rgba(2, 178, 114, 0.3);
+}
+
+.match-tab:hover:not(.active) {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+.match-tab.active i.fa-circle {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Match Content */
+.match-content {
+    display: none;
+}
+
+.match-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Matches Grid */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+}
+
+/* Match Card */
+.match-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e8e8e8;
+    position: relative;
+}
+
+.match-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.match-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+    font-family: "Montserrat", sans-serif;
+}
+
+.live-badge {
+    background: #ff4444;
+    color: white;
+    animation: pulse-badge 2s infinite;
+}
+
+.upcoming-badge {
+    background: #ffa500;
+    color: white;
+}
+
+.completed-badge {
+    background: #666;
+    color: white;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.match-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.match-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.match-card:hover .match-image img {
+    transform: scale(1.05);
+}
+
+.match-info {
+    padding: 24px;
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    gap: 15px;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+}
+
+.team h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.team.winner h3 {
+    color: var(--primary-green);
+}
+
+.team .score {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-green);
+    font-family: "Montserrat", sans-serif;
+}
+
+.vs {
+    font-size: 14px;
+    color: #999;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.match-details {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.match-details p {
+    font-size: 13px;
+    color: #666;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+}
+
+.match-details i {
+    color: var(--primary-green);
+    font-size: 12px;
+}
+
+.match-over {
+    font-weight: 600;
+    color: #333 !important;
+}
+
+.match-result {
+    font-weight: 600;
+    color: var(--primary-green) !important;
+}
+
+.match-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.stat-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.momentum-up {
+    color: var(--primary-green) !important;
+}
+
+.match-preview {
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+}
+
+.match-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #666;
+    font-family: "Inter", sans-serif;
+}
+
+.highlight-item i {
+    color: var(--primary-green);
+    font-size: 14px;
+}
+
+.view-match-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-green);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.view-match-btn:hover {
+    background: var(--primary-green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 178, 114, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .matches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-tabs {
+        gap: 8px;
+    }
+
+    .match-tab {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .matchcenter-hero {
+        padding: 100px 15px 60px;
+    }
+
+    .matchcenter-container {
+        padding: 40px 15px;
+    }
+
+    .match-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .match-tab {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .match-teams {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .vs {
+        margin: 5px 0;
+    }
+
+    .team .score {
+        font-size: 20px;
+    }
+}
+
+/* Reminder Modal Styles */
+.reminder-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.reminder-modal.active {
+    display: flex;
+}
+
+.reminder-modal-content {
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.reminder-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.reminder-modal-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.reminder-modal-body {
+    padding: 30px;
+}
+
+.match-info-reminder {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.match-info-reminder h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 12px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.match-info-reminder p {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+}
+
+.match-info-reminder i {
+    color: var(--primary-green);
+    width: 18px;
+}
+
+.reminder-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.reminder-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Inter", sans-serif;
+}
+
+.reminder-option:hover {
+    border-color: var(--primary-green);
+    background: #f0fdf4;
+}
+
+.reminder-option input[type="radio"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-green);
+}
+
+.reminder-option input[type="radio"]:checked + span {
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.custom-time-input {
+    margin-bottom: 25px;
+}
+
+.custom-datetime-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.custom-datetime-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.reminder-notification-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    font-family: "Inter", sans-serif;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-green);
+}
+
+.reminder-modal-footer {
+    display: flex;
+    gap: 15px;
+    padding: 25px 30px;
+    border-top: 1px solid #f0f0f0;
+    justify-content: flex-end;
+}
+
+.btn-cancel,
+.btn-confirm {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+}
+
+.btn-cancel {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.btn-cancel:hover {
+    background: #e0e0e0;
+}
+
+.btn-confirm {
+    background: var(--primary-green);
+    color: white;
+}
+
+.btn-confirm:hover {
+    background: var(--primary-green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 178, 114, 0.3);
+}
+
+@media (max-width: 600px) {
+    .reminder-modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .reminder-modal-header,
+    .reminder-modal-body,
+    .reminder-modal-footer {
+        padding: 20px;
+    }
+
+    .reminder-modal-footer {
+        flex-direction: column;
+    }
+
+    .btn-cancel,
+    .btn-confirm {
+        width: 100%;
+    }
+}
+

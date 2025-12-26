@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Match Details - Live cricket match information, scores, and statistics.">
+    <meta name="theme-color" content="#2D8B7A">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Match Details - Matcha</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="matchdetails.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo-50.png" alt="Matcha Logo" />
+                <span class="logo-text">MATCHA</span>
+            </a>
+        </div>
+
+        <!-- Hamburger -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+
+        <nav class="menu">
+            <a href="index.html">HOME</a>
+            <a href="index.html#WHYMATCHA">WHY MATCHA</a>
+            <a href="index.html#PRICING">PRICING</a>
+            <a href="index.html#DOWNLOAD" class="download-btn">DOWNLOAD</a>
+        </nav>
+    </header>
+
+    <!-- Match Details Hero -->
+    <section class="match-details-hero">
+        <div class="match-details-hero-content">
+            <a href="matchcenter.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Match Center</span>
+            </a>
+            <div class="live-indicator">
+                <span class="live-dot"></span>
+                <span>LIVE</span>
+            </div>
+            <h1 id="match-title">Myanmar vs Bhutan</h1>
+            <p id="match-tournament">International T20 Series</p>
+        </div>
+    </section>
+
+    <!-- Live Score Section -->
+    <section class="live-score-section">
+        <div class="match-details-container">
+            <div class="score-card">
+                <div class="team-score-card">
+                    <div class="team-info-large">
+                        <div class="team-logo-circle">MY</div>
+                        <h2>Myanmar</h2>
+                    </div>
+                    <div class="score-large" id="team1-score">145/3</div>
+                    <div class="overs-info" id="team1-overs">18.3 Overs</div>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="team-score-card">
+                    <div class="team-info-large">
+                        <div class="team-logo-circle">BH</div>
+                        <h2>Bhutan</h2>
+                    </div>
+                    <div class="score-large" id="team2-score">98/5</div>
+                    <div class="overs-info" id="team2-overs">15.2 Overs</div>
+                </div>
+            </div>
+
+            <!-- Match Info -->
+            <div class="match-info-card">
+                <div class="info-row">
+                    <span class="info-label"><i class="fas fa-map-marker-alt"></i> Venue</span>
+                    <span class="info-value" id="match-venue">Singapore Cricket Club</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label"><i class="far fa-calendar"></i> Date</span>
+                    <span class="info-value" id="match-date">Today, Dec 14, 2024</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label"><i class="far fa-clock"></i> Started</span>
+                    <span class="info-value" id="match-time">2:30 PM</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label"><i class="fas fa-trophy"></i> Format</span>
+                    <span class="info-value">T20</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stats Section -->
+    <section class="live-stats-section">
+        <div class="match-details-container">
+            <h2 class="section-title">Live Statistics</h2>
+            
+            <div class="stats-cards-grid">
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Win Probability</h3>
+                    <div class="stat-value-large" id="win-probability">Myanmar 78%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Current Run Rate</h3>
+                    <div class="stat-value-large" id="run-rate">7.89</div>
+                    <p class="stat-detail">Required: 8.5</p>
+                </div>
+
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Momentum</h3>
+                    <div class="stat-value-large momentum-text">↗ Favoring Myanmar</div>
+                    <p class="stat-detail">Strong batting performance</p>
+                </div>
+
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Target</h3>
+                    <div class="stat-value-large" id="target">146 runs</div>
+                    <p class="stat-detail">From 20 overs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Overs Section -->
+    <section class="recent-overs-section">
+        <div class="match-details-container">
+            <h2 class="section-title">Recent Overs</h2>
+            <div class="overs-timeline">
+                <div class="over-item">
+                    <div class="over-number">18</div>
+                    <div class="over-details">
+                        <div class="over-runs">12 runs</div>
+                        <div class="over-balls">1 4 1 4 1 1</div>
+                    </div>
+                </div>
+                <div class="over-item">
+                    <div class="over-number">17</div>
+                    <div class="over-details">
+                        <div class="over-runs">8 runs</div>
+                        <div class="over-balls">1 2 1 1 2 1</div>
+                    </div>
+                </div>
+                <div class="over-item">
+                    <div class="over-number">16</div>
+                    <div class="over-details">
+                        <div class="over-runs">15 runs</div>
+                        <div class="over-balls">4 1 6 1 2 1</div>
+                    </div>
+                </div>
+                <div class="over-item">
+                    <div class="over-number">15</div>
+                    <div class="over-details">
+                        <div class="over-runs">6 runs</div>
+                        <div class="over-balls">1 1 1 1 1 1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Players Section -->
+    <section class="key-players-section">
+        <div class="match-details-container">
+            <h2 class="section-title">Key Players</h2>
+            <div class="players-grid">
+                <div class="player-card">
+                    <div class="player-avatar">JS</div>
+                    <h4>J. Smith</h4>
+                    <p class="player-role">Batsman</p>
+                    <div class="player-stats">
+                        <span class="stat">65* (45)</span>
+                        <span class="stat">SR: 144.4</span>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-avatar">AW</div>
+                    <h4>A. Warner</h4>
+                    <p class="player-role">Batsman</p>
+                    <div class="player-stats">
+                        <span class="stat">42 (38)</span>
+                        <span class="stat">SR: 110.5</span>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-avatar">MJ</div>
+                    <h4>M. Johnson</h4>
+                    <p class="player-role">Bowler</p>
+                    <div class="player-stats">
+                        <span class="stat">2/28 (4)</span>
+                        <span class="stat">Econ: 7.0</span>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-avatar">RK</div>
+                    <h4>R. Kumar</h4>
+                    <p class="player-role">Bowler</p>
+                    <div class="player-stats">
+                        <span class="stat">1/25 (3.3)</span>
+                        <span class="stat">Econ: 7.1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="CONTACT" class="footer-section">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="terms&conditions.html">Terms&Conditions</a>
+                <a href="#CONTACT" class="footer-contact-link">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="follow-us-text">Follow Us</h4>
+                <div class="social-icons-wrapper">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/matchdetails.js"></script>
+</body>
+</html>
+

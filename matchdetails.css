@@ -1,0 +1,436 @@
+/* ===============================
+   MATCH DETAILS PAGE STYLES
+   =============================== */
+
+/* Match Details Hero */
+.match-details-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    padding: 120px 20px 60px;
+    text-align: center;
+    color: white;
+    margin-top: var(--nav-height);
+}
+
+.match-details-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+.live-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(255, 68, 68, 0.2);
+    border: 1px solid rgba(255, 68, 68, 0.5);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff4444;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.match-details-hero-content h1 {
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.match-details-hero-content p {
+    font-size: clamp(16px, 2vw, 20px);
+    opacity: 0.95;
+    font-family: "Inter", sans-serif;
+}
+
+/* Match Details Container */
+.match-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Live Score Section */
+.live-score-section {
+    background: #f6f6f6;
+    padding: 40px 20px;
+}
+
+.score-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.team-score-card {
+    flex: 1;
+    text-align: center;
+    min-width: 250px;
+}
+
+.team-info-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.team-info-large h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.score-large {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.overs-info {
+    font-size: 18px;
+    color: #666;
+    font-family: "Inter", sans-serif;
+}
+
+.vs-divider {
+    font-size: 24px;
+    color: #999;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.match-info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+}
+
+.info-label i {
+    color: var(--primary-green);
+    width: 18px;
+}
+
+.info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Live Stats Section */
+.live-stats-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.stats-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.stat-card-large {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s ease;
+}
+
+.stat-card-large:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-green);
+}
+
+.stat-icon-large {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.stat-card-large h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.stat-value-large {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.momentum-text {
+    color: var(--primary-green) !important;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    transition: width 0.3s ease;
+}
+
+.stat-detail {
+    font-size: 13px;
+    color: #999;
+    font-family: "Inter", sans-serif;
+}
+
+/* Recent Overs Section */
+.recent-overs-section {
+    padding: 60px 20px;
+    background: #f6f6f6;
+}
+
+.overs-timeline {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.over-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.over-item:last-child {
+    border-bottom: none;
+}
+
+.over-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.over-details {
+    flex: 1;
+}
+
+.over-runs {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.over-balls {
+    font-size: 14px;
+    color: #666;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Key Players Section */
+.key-players-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.player-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-green);
+}
+
+.player-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    margin: 0 auto 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.player-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.player-role {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.player-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.player-stats .stat {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .score-card {
+        flex-direction: column;
+    }
+
+    .vs-divider {
+        margin: 15px 0;
+    }
+
+    .stats-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

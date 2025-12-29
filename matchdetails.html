@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Match Details - Live cricket match information, scores, and statistics.">
+    <meta name="theme-color" content="#2D8B7A">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Match Details - Matcha</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="matchdetails.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo-50.png" alt="Matcha Logo" />
+                <span class="logo-text">MATCHA</span>
+            </a>
+        </div>
+
+        <!-- Hamburger -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+
+        <nav class="menu">
+            <a href="index.html">HOME</a>
+            <a href="index.html#WHYMATCHA">WHY MATCHA</a>
+            <a href="index.html#PRICING">PRICING</a>
+            <a href="index.html#DOWNLOAD" class="download-btn">DOWNLOAD</a>
+        </nav>
+    </header>
+
+    <!-- Match Details Page -->
+    <section class="match-details-page">
+        <div class="match-details-container">
+            <!-- Back Button -->
+            <a href="matchcenter.html" class="back-btn-details">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back</span>
+            </a>
+
+            <!-- Match Title Section -->
+            <div class="match-title-section-details">
+                <h1 id="match-number">1st Match</h1>
+                <div class="live-badge-details">
+                    <i class="fas fa-circle"></i>
+                    <span>Live</span>
+                </div>
+            </div>
+
+            <!-- Match Info Card -->
+            <div class="match-info-card-details">
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">MATCH</span>
+                        <span class="info-value-details" id="match-title">Sylhet Titans vs Rajshahi Warriors</span>
+                    </div>
+                </div>
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">SERIES</span>
+                        <span class="info-value-details" id="match-series">Bangladesh Premier League 2025-26</span>
+                    </div>
+                </div>
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">VENUE</span>
+                        <span class="info-value-details" id="match-venue">Sylhet International Cricket Stadium</span>
+                    </div>
+                </div>
+                <div class="info-item-details">
+                    <div class="info-icon-details">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="info-content-details">
+                        <span class="info-label-details">START TIME</span>
+                        <span class="info-value-details" id="match-time">26th Dec 2025, 9:00 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Score Summary Card -->
+            <div class="score-summary-card">
+                <div class="score-summary-left">
+                    <div class="team-abbrev">
+                        <span class="team-dot"></span>
+                        <span id="team-abbrev">SLT</span>
+                    </div>
+                    <div class="innings-label">1ST INNINGS</div>
+                </div>
+                <div class="score-summary-right">
+                    <div class="score-large-summary" id="current-score">45/1</div>
+                    <div class="overs-summary" id="current-overs">(5.6 ov)</div>
+                </div>
+            </div>
+
+            <!-- Teams Card -->
+            <div class="teams-card">
+                <div class="card-header">
+                    <div class="card-icon purple">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <span class="card-title">Teams</span>
+                </div>
+                <div class="teams-display">
+                    <span class="team-name-left" id="team1-name">Sylhet Titans</span>
+                    <span class="vs-text-teams">VS</span>
+                    <span class="team-name-right" id="team2-name">Rajshahi Warriors</span>
+                </div>
+            </div>
+
+            <!-- Worm Graph Card -->
+            <div class="worm-graph-card">
+                <div class="card-header">
+                    <div class="card-icon green">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <span class="card-title">Worm Graph</span>
+                </div>
+                <div class="graph-legend">
+                    <div class="legend-item">
+                        <div class="legend-line green-line"></div>
+                        <span id="legend-team">Sylhet Titans 1st</span>
+                    </div>
+                </div>
+                <div class="graph-container">
+                    <canvas id="worm-graph-canvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Run Rate Card -->
+            <div class="run-rate-card">
+                <div class="card-header">
+                    <div class="card-icon orange">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <span class="card-title">Run Rate</span>
+                </div>
+                <div class="graph-legend">
+                    <div class="legend-item">
+                        <div class="legend-line green-line"></div>
+                        <span id="legend-team-3">Sylhet Titans 1st</span>
+                    </div>
+                </div>
+                <div class="graph-container">
+                    <canvas id="run-rate-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="CONTACT" class="footer-section">
+        <div class="footer-container">
+            <!-- LOGO AND TAGLINE -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/logo-50.png" alt="Matcha Logo" />
+                    <span class="footer-logo-text">MATCHA</span>
+                </div>
+                <p class="footer-tagline">Performance, insights & live match engagement.</p>
+            </div>
+
+            <!-- FOOTER LINKS -->
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="terms&conditions.html">Terms&Conditions</a>
+                <a href="#CONTACT" class="footer-contact-link">Contact</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social">
+                <h4 class="follow-us-text">Follow Us</h4>
+                <div class="social-icons-wrapper">
+                    <a href="https://www.facebook.com/cricalgorithmics" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/tvconal/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/tvconal" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCHox09Cv3_SWy7SJYuKof7A" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="contact-modal-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us. We'd love to hear from you!</p>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address *</label>
+                    <input type="email" id="contact-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone" name="phone" placeholder="Enter your phone number with country code">
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject">Subject *</label>
+                    <input type="text" id="contact-subject" name="subject" placeholder="What is this regarding?" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/matchdetails.js"></script>
+</body>
+</html>
+
+

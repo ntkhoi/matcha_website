@@ -1,0 +1,352 @@
+/* ===============================
+   MATCH DETAILS PAGE STYLES
+   =============================== */
+
+/* Match Details Page */
+.match-details-page {
+    background: #F5F5F5;
+    min-height: 100vh;
+    padding: 80px 0 40px;
+    margin-top: var(--nav-height);
+}
+
+.match-details-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Back Button */
+.back-btn-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-green);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 2px 8px rgba(2, 178, 114, 0.3);
+}
+
+.back-btn-details:hover {
+    background: var(--primary-green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 178, 114, 0.4);
+}
+
+.back-btn-details i {
+    font-size: 14px;
+}
+
+/* Match Title Section */
+.match-title-section-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.match-title-section-details h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.live-badge-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #FFE5E5;
+    color: #FF4444;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.live-badge-details i {
+    font-size: 8px;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Match Info Card */
+.match-info-card-details {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-item-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item-details:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon-details {
+    width: 40px;
+    height: 40px;
+    background: #E8F5E9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon-details i {
+    color: var(--primary-green);
+    font-size: 18px;
+}
+
+.info-content-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label-details {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.info-value-details {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    font-family: "Inter", sans-serif;
+}
+
+/* Score Summary Card */
+.score-summary-card {
+    background: #E8F5E9;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.score-summary-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.team-abbrev {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.team-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--primary-green);
+    border-radius: 50%;
+}
+
+.innings-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.score-summary-right {
+    text-align: right;
+}
+
+.score-large-summary {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 4px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.overs-summary {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+
+/* Teams Card */
+.teams-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.card-icon.purple {
+    background: #9C27B0;
+}
+
+.card-icon.green {
+    background: var(--primary-green);
+}
+
+.card-icon.orange {
+    background: #FF9800;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.teams-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.team-name-left,
+.team-name-right {
+    flex: 1;
+    text-align: center;
+}
+
+.vs-text-teams {
+    font-size: 14px;
+    color: #999;
+    font-weight: 600;
+}
+
+/* Worm Graph Card */
+.worm-graph-card,
+.run-rate-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.graph-legend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-line {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.legend-line.green-line {
+    background: var(--primary-green);
+}
+
+.graph-container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.graph-container canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .match-details-container {
+        max-width: 600px;
+    }
+
+    .score-large-summary {
+        font-size: 42px;
+    }
+
+    .graph-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-details-page {
+        padding: 70px 0 30px;
+    }
+
+    .match-title-section-details h1 {
+        font-size: 24px;
+    }
+
+    .score-large-summary {
+        font-size: 32px;
+    }
+
+    .graph-container {
+        height: 180px;
+    }
+}

@@ -4,12 +4,12 @@
 const highlightsMatchData = {
     'sydney-brisbane': {
         group: 'Group C',
-        result: 'Maharashtra won by 8 wickets',
+        result: 'Sydney won by 47 runs',
         series: 'Vijay Hazare Trophy Elite 2025-26',
-        venue: 'KL Saini Ground',
-        date: '26th Dec 2025, 3:30 AM',
-        team1: { name: 'Maharashtra', abbrev: 'Mah' },
-        team2: { name: 'SIKKIM', abbrev: 'SK' },
+        venue: 'Sydney Cricket Ground',
+        date: '10th Dec 2025, 3:30 PM',
+        team1: { name: 'Sydney', abbrev: 'SY' },
+        team2: { name: 'Brisbane', abbrev: 'BR' },
         // Graph data - cumulative runs (worm graph)
         wormData: [0, 5, 35, 60, 105, 125, 150, 200],
         // Run rate per over
@@ -20,7 +20,7 @@ const highlightsMatchData = {
         result: 'Hobart won by 5 wickets',
         series: 'Big Bash League 2025-26',
         venue: 'Melbourne Cricket Ground',
-        date: '26th Dec 2025, 2:00 PM',
+        date: '8th Dec 2025, 2:00 PM',
         team1: { name: 'Melbourne', abbrev: 'MEL' },
         team2: { name: 'Hobart', abbrev: 'HOB' },
         wormData: [0, 12, 28, 45, 62, 80, 98, 115, 132, 150, 170, 189],
@@ -31,7 +31,7 @@ const highlightsMatchData = {
         result: 'Gulf Giants won by 17 runs',
         series: 'T20 League 2025',
         venue: 'Dubai International Stadium',
-        date: '26th Dec 2025, 7:30 PM',
+        date: '5th Dec 2025, 7:30 PM',
         team1: { name: 'Gulf Giants', abbrev: 'GG' },
         team2: { name: 'Dubai', abbrev: 'DU' },
         wormData: [0, 8, 18, 35, 52, 68, 85, 102, 118, 135, 150, 165, 180, 195, 201, 218],

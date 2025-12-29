@@ -33,7 +33,7 @@ const matchDetailsData = {
         team2: { name: 'Dubai', abbrev: 'DU', score: '156/2', overs: '12.5' },
         series: 'T20 League 2025',
         venue: 'Dubai International Stadium',
-        time: '26th Dec 2025, 2:00 PM',
+        time: '26th Dec 2025, 3:00 PM',
         wormData: [0, 8, 18, 35, 52, 68, 85, 102, 118, 135, 150, 165, 180, 195, 201],
         runRate: [8, 9, 9, 8.75, 10.4, 11.33, 12.14, 12.75, 13.11, 13.5, 13.64, 13.75, 13.85, 13.93, 13.4]
     },
@@ -44,7 +44,7 @@ const matchDetailsData = {
         team2: { name: 'Delhi', abbrev: 'DL', score: '142/8', overs: '18.0' },
         series: 'IPL 2025',
         venue: 'Wankhede Stadium',
-        time: '26th Dec 2025, 7:30 PM',
+        time: '26th Dec 2025, 1:00 PM',
         wormData: [0, 12, 25, 38, 52, 65, 78, 92, 105, 118, 132, 145, 158, 170, 178],
         runRate: [12, 12.5, 12.67, 12.75, 13, 13.17, 13.29, 13.13, 13.11, 13.2, 13.18, 13.25, 13.08, 12.86, 12.67]
     }

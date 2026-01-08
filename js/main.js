@@ -16,9 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         initFormValidation(joinForm);
     }
 
-    // Pricing Tabs Handler
-    initPricingTabs();
-
     // Billing Toggle Handler
     initBillingToggle();
 

@@ -21,6 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Contact Modal Handler
     initContactModal();
+
+    // Match Center Screens Handler
+    initMatchCenterScreens();
+    
+    // Match Center Carousel Handler
+    initMatchCenterCarousel();
 });
 
 /**
@@ -428,5 +434,125 @@ function initContactModal() {
             // Auto close after 3 seconds (optional)
             // setTimeout(closeModal, 3000);
         });
+    }
+}
+
+/**
+ * Initialize Match Center Screens functionality
+ */
+function initMatchCenterScreens() {
+    const viewMatchCenterBtn = document.getElementById('view-match-center-btn');
+    const matchCenterScreensSection = document.getElementById('match-center-screens');
+
+    if (!viewMatchCenterBtn || !matchCenterScreensSection) return;
+
+    // Toggle screens when clicking the button
+    viewMatchCenterBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (matchCenterScreensSection.style.display === 'none') {
+            // Show screens
+            matchCenterScreensSection.style.display = 'block';
+            viewMatchCenterBtn.textContent = 'Hide Match Center';
+            
+            // Smooth scroll to the screens section (within the same div)
+            setTimeout(function() {
+                matchCenterScreensSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            }, 100);
+        } else {
+            // Hide screens
+            matchCenterScreensSection.style.display = 'none';
+            viewMatchCenterBtn.textContent = 'View Match Center';
+            
+            // Scroll back to the button
+            setTimeout(function() {
+                viewMatchCenterBtn.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }, 100);
+        }
+    });
+}
+
+/**
+ * Initialize Match Center Carousel (auto-rotating images)
+ */
+function initMatchCenterCarousel() {
+    const carousel = document.querySelector('.match-center-carousel');
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Function to show next slide
+    function showNextSlide() {
+        // Remove active class from current slide
+        slides[currentSlide].classList.remove('active');
+        
+        // Move to next slide
+        currentSlide = (currentSlide + 1) % totalSlides;
+        
+        // Add active class to next slide
+        slides[currentSlide].classList.add('active');
+    }
+
+    // Start carousel only when section is visible
+    let carouselInterval = null;
+
+    function startCarousel() {
+        if (carouselInterval) return; // Already running
+        
+        // Change image every 3 seconds
+        carouselInterval = setInterval(showNextSlide, 3000);
+    }
+
+    function stopCarousel() {
+        if (carouselInterval) {
+            clearInterval(carouselInterval);
+            carouselInterval = null;
+        }
+    }
+
+    // Check if section is visible and start/stop carousel accordingly
+    const matchCenterScreensSection = document.getElementById('match-center-screens');
+    if (matchCenterScreensSection) {
+        // Observer to detect when section becomes visible
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && entry.target.style.display !== 'none') {
+                    startCarousel();
+                } else {
+                    stopCarousel();
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        observer.observe(matchCenterScreensSection);
+
+        // Also check on button click
+        const viewMatchCenterBtn = document.getElementById('view-match-center-btn');
+        if (viewMatchCenterBtn) {
+            viewMatchCenterBtn.addEventListener('click', function() {
+                setTimeout(function() {
+                    if (matchCenterScreensSection.style.display === 'block') {
+                        startCarousel();
+                    } else {
+                        stopCarousel();
+                    }
+                }, 500);
+            });
+        }
+    } else {
+        // Fallback: start carousel immediately if observer not available
+        startCarousel();
     }
 }

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Match Center - Live scores, upcoming matches, and recent results for cricket matches.">
+    <meta name="theme-color" content="#2D8B7A">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Match Center - Matcha</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="matchcenter.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo-50.png" alt="Matcha Logo" />
+                <span class="logo-text">MATCHA</span>
+            </a>
+        </div>
+
+        <!-- Hamburger -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+
+        <nav class="menu">
+            <a href="index.html">HOME</a>
+            <a href="index.html#WHYMATCHA">WHY MATCHA</a>
+            <a href="index.html#PRICING">PRICING</a>
+            <a href="index.html#DOWNLOAD" class="download-btn">DOWNLOAD</a>
+        </nav>
+    </header>
+
+    <!-- Match Center Hero Section -->
+    <section class="matchcenter-hero">
+        <a href="index.html#WHYMATCHA" class="back-btn-matchcenter">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back</span>
+        </a>
+        <div class="matchcenter-hero-content">
+            <h1>Match Center</h1>
+            <p>Live scores, momentum tracking, win probability and key moments for fans.</p>
+        </div>
+    </section>
+
+    <!-- Match Tabs Section -->
+    <section class="matchcenter-tabs-section">
+        <div class="matchcenter-container">
+            <!-- Tabs Navigation -->
+            <div class="match-tabs">
+                <button class="match-tab active" data-tab="live">
+                    <i class="fas fa-circle"></i>
+                    <span>Live</span>
+                </button>
+                <button class="match-tab" data-tab="upcoming">
+                    <i class="fas fa-clock"></i>
+                    <span>Upcoming</span>
+                </button>
+                <button class="match-tab" data-tab="recent">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </button>
+            </div>
+
+            <!-- Live Matches -->
+            <div class="match-content active" id="live-matches">
+                <div class="matches-grid">
+                    <!-- Match Card 1 -->
+                    <div class="match-card live">
+                        <div class="match-status live-badge">
+                            <i class="fas fa-circle"></i>
+                            <span>LIVE</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/MyanmarVSBhutan.jpg" alt="Myanmar vs Bhutan" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Myanmar</h3>
+                                    <span class="score">145/3</span>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Bhutan</h3>
+                                    <span class="score">98/5</span>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-over">18.3 Overs</p>
+                                <p class="match-venue">Singapore Cricket Club</p>
+                                <p class="match-time">Started 2:30 PM</p>
+                            </div>
+                            <a href="matchdetails.html?match=myanmar-bhutan" class="view-match-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Match Card 2 -->
+                    <div class="match-card live">
+                        <div class="match-status live-badge">
+                            <i class="fas fa-circle"></i>
+                            <span>LIVE</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/GulfgaintVSDubai.png" alt="Gulf Giants vs Dubai" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Gulf Giants</h3>
+                                    <span class="score">201/4</span>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Dubai</h3>
+                                    <span class="score">156/2</span>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-over">15.2 Overs</p>
+                                <p class="match-venue">Dubai International Stadium</p>
+                                <p class="match-time">Started 3:00 PM</p>
+                            </div>
+                            <a href="matchdetails.html?match=gulfgiants-dubai" class="view-match-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Match Card 3 -->
+                    <div class="match-card live">
+                        <div class="match-status live-badge">
+                            <i class="fas fa-circle"></i>
+                            <span>LIVE</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/MIvsDy.jpg" alt="Mumbai Indians vs Delhi" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Mumbai Indians</h3>
+                                    <span class="score">178/6</span>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Delhi</h3>
+                                    <span class="score">142/8</span>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-over">19.1 Overs</p>
+                                <p class="match-venue">Wankhede Stadium</p>
+                                <p class="match-time">Started 1:00 PM</p>
+                            </div>
+                            <a href="matchdetails.html?match=mumbai-delhi" class="view-match-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Matches -->
+            <div class="match-content" id="upcoming-matches">
+                <div class="matches-grid">
+                    <!-- Match Card 1 -->
+                    <div class="match-card upcoming">
+                        <div class="match-status upcoming-badge">
+                            <i class="fas fa-clock"></i>
+                            <span>UPCOMING</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/melbourceVShor.png" alt="Melbourne vs Hobart" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Melbourne</h3>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Hobart</h3>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-date"><i class="far fa-calendar"></i> Tomorrow, Dec 15</p>
+                                <p class="match-venue">Melbourne Cricket Ground</p>
+                                <p class="match-time"><i class="far fa-clock"></i> 2:00 PM IST</p>
+                            </div>
+                            <a href="#" class="view-match-btn set-reminder-btn" data-match="melbourne-hobart">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Match Card 2 -->
+                    <div class="match-card upcoming">
+                        <div class="match-status upcoming-badge">
+                            <i class="fas fa-clock"></i>
+                            <span>UPCOMING</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/SydneyVSBrish.jpg" alt="Sydney vs Brisbane" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Sydney</h3>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Brisbane</h3>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-date"><i class="far fa-calendar"></i> Dec 16, 2025</p>
+                                <p class="match-venue">Sydney Cricket Ground</p>
+                                <p class="match-time"><i class="far fa-clock"></i> 5:30 PM IST</p>
+                            </div>
+                            <a href="#" class="view-match-btn set-reminder-btn" data-match="sydney-brisbane-upcoming">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Match Card 3 -->
+                    <div class="match-card upcoming">
+                        <div class="match-status upcoming-badge">
+                            <i class="fas fa-clock"></i>
+                            <span>UPCOMING</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/MyanmarVSBhutan.jpg" alt="Singapore vs Thailand" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Singapore</h3>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Thailand</h3>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-date"><i class="far fa-calendar"></i> Dec 17, 2025</p>
+                                <p class="match-venue">Singapore Cricket Club</p>
+                                <p class="match-time"><i class="far fa-clock"></i> 10:00 AM IST</p>
+                            </div>
+                            <a href="#" class="view-match-btn set-reminder-btn" data-match="singapore-thailand">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Matches -->
+            <div class="match-content" id="recent-matches">
+                <div class="matches-grid">
+                    <!-- Match Card 1 -->
+                    <div class="match-card recent">
+                        <div class="match-status completed-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>COMPLETED</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/SydneyVSBrish.jpg" alt="Sydney vs Brisbane" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team winner">
+                                    <h3>Sydney</h3>
+                                    <span class="score">245/8</span>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Brisbane</h3>
+                                    <span class="score">198/10</span>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-result"><i class="fas fa-trophy"></i> Sydney won by 47 runs</p>
+                                <p class="match-venue">Sydney Cricket Ground</p>
+                                <p class="match-date">Dec 10, 2025</p>
+                            </div>
+                            <a href="highlights.html?match=sydney-brisbane" class="view-match-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Match Card 2 -->
+                    <div class="match-card recent">
+                        <div class="match-status completed-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>COMPLETED</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/melbourceVShor.png" alt="Melbourne vs Hobart" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <h3>Melbourne</h3>
+                                    <span class="score">189/7</span>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team winner">
+                                    <h3>Hobart</h3>
+                                    <span class="score">192/5</span>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-result"><i class="fas fa-trophy"></i> Hobart won by 5 wickets</p>
+                                <p class="match-venue">Melbourne Cricket Ground</p>
+                                <p class="match-date">Dec 8, 2025</p>
+                            </div>
+                            <a href="highlights.html?match=melbourne-hobart" class="view-match-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Match Card 3 -->
+                    <div class="match-card recent">
+                        <div class="match-status completed-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>COMPLETED</span>
+                        </div>
+                        <div class="match-image">
+                            <img src="assets/GulfgaintVSDubai.png" alt="Gulf Giants vs Dubai" loading="lazy">
+                        </div>
+                        <div class="match-info">
+                            <div class="match-teams">
+                                <div class="team winner">
+                                    <h3>Gulf Giants</h3>
+                                    <span class="score">218/4</span>
+                                </div>
+                                <div class="vs">vs</div>
+                                <div class="team">
+                                    <h3>Dubai</h3>
+                                    <span class="score">201/9</span>
+                                </div>
+                            </div>
+                            <div class="match-details">
+                                <p class="match-result"><i class="fas fa-trophy"></i> Gulf Giants won by 17 runs</p>
+                                <p class="match-venue">Dubai International Stadium</p>
+                                <p class="match-date">Dec 5, 2025</p>
+                            </div>
+                            <a href="highlights.html?match=gulfgiants-dubai" class="view-match-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="CONTACT" class="footer-section">
+        <div class="footer-container">
+            <!-- LOGO AND TAGLINE -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/logo-50.png" alt="Matcha Logo" />
+                    <span class="footer-logo-text">MATCHA</span>
+                </div>
+                <p class="footer-tagline">Performance, insights & live match engagement.</p>
+            </div>
+
+            <!-- FOOTER LINKS -->
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="terms&conditions.html">Terms&Conditions</a>
+                <a href="#CONTACT" class="footer-contact-link">Contact</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social">
+                <h4 class="follow-us-text">FOLLOW US</h4>
+                <div class="social-icons-wrapper">
+                    <a href="https://www.facebook.com/cricalgorithmics" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/tvconal/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/tvconal" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCHox09Cv3_SWy7SJYuKof7A" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>Copyright <span>Matcha</span>, All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="contact-modal-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us. We'd love to hear from you!</p>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address *</label>
+                    <input type="email" id="contact-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone" name="phone" placeholder="Enter your phone number with country code">
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject">Subject *</label>
+                    <input type="text" id="contact-subject" name="subject" placeholder="What is this regarding?" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Match Details Modal -->
+    <div id="reminder-modal" class="reminder-modal">
+        <div class="reminder-modal-content">
+            <!-- Back Button -->
+            <button class="back-btn" id="close-reminder-modal">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+
+            <!-- Match Title -->
+            <div class="match-title-section">
+                <h2 id="reminder-match-number">12th Match</h2>
+                <div class="upcoming-badge-modal">
+                    <i class="far fa-calendar"></i>
+                    <span>Upcoming</span>
+                </div>
+            </div>
+
+            <!-- Match Info Card -->
+            <div class="match-info-card">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">MATCH</span>
+                        <span class="info-value" id="reminder-match-title">Perth Scorchers vs Hobart Hurricanes</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">SERIES</span>
+                        <span class="info-value" id="reminder-match-series">Big Bash League 2025-26</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">VENUE</span>
+                        <span class="info-value" id="reminder-match-venue">Perth Stadium</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">START TIME</span>
+                        <span class="info-value" id="reminder-match-time">26th Dec 2025, 10:15 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Logos Section -->
+            <div class="team-logos-section">
+                <div class="team-logo-circle team-logo-left">
+                    <div class="logo-placeholder" id="team-logo-1"></div>
+                </div>
+                <div class="vs-text">VS</div>
+                <div class="team-logo-circle team-logo-right">
+                    <div class="logo-placeholder" id="team-logo-2"></div>
+                </div>
+            </div>
+
+            <!-- Match Prediction Section -->
+            <div class="match-prediction-section">
+                <div class="prediction-header">
+                    <i class="far fa-clock"></i>
+                    <span>Match Prediction</span>
+                </div>
+                <div class="prediction-cards">
+                    <div class="prediction-card prediction-card-left">
+                        <div class="prediction-logo" id="prediction-logo-1"></div>
+                        <div class="prediction-percentage" id="prediction-percentage-1">71%</div>
+                        <div class="prediction-team-name" id="prediction-team-1">Perth Scorchers</div>
+                    </div>
+                    <div class="vs-text-small">VS</div>
+                    <div class="prediction-card prediction-card-right">
+                        <div class="prediction-logo" id="prediction-logo-2"></div>
+                        <div class="prediction-percentage" id="prediction-percentage-2">27%</div>
+                        <div class="prediction-team-name" id="prediction-team-2">Hobart Hurricanes</div>
+                    </div>
+                </div>
+                <div class="prediction-bar-container">
+                    <div class="prediction-bar-labels">
+                        <span class="prediction-label-left" id="prediction-label-1">PERTH SCORCHERS</span>
+                        <span class="prediction-label-right" id="prediction-label-2">HOBART HURRICANES</span>
+                    </div>
+                    <div class="prediction-bar">
+                        <div class="prediction-bar-fill prediction-bar-left" id="prediction-bar-1" style="width: 71%"></div>
+                        <div class="prediction-bar-fill prediction-bar-right" id="prediction-bar-2" style="width: 27%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Match Center Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.match-tab');
+            const contents = document.querySelectorAll('.match-content');
+
+            // Function to switch tabs
+            function switchTab(targetTab) {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to target tab
+                const tabElement = document.querySelector(`.match-tab[data-tab="${targetTab}"]`);
+                if (tabElement) {
+                    tabElement.classList.add('active');
+                }
+
+                // Show corresponding content
+                if (targetTab === 'live') {
+                    document.getElementById('live-matches').classList.add('active');
+                } else if (targetTab === 'upcoming') {
+                    document.getElementById('upcoming-matches').classList.add('active');
+                } else if (targetTab === 'recent') {
+                    document.getElementById('recent-matches').classList.add('active');
+                }
+            }
+
+            // Check URL parameter for tab
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+            if (tabParam && (tabParam === 'live' || tabParam === 'upcoming' || tabParam === 'recent')) {
+                switchTab(tabParam);
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    switchTab(targetTab);
+                });
+            });
+
+            // Reminder Modal Functionality
+            const reminderModal = document.getElementById('reminder-modal');
+            const setReminderBtns = document.querySelectorAll('.set-reminder-btn');
+            
+            // Check if modal elements exist
+            if (!reminderModal || setReminderBtns.length === 0) {
+                console.error('Reminder modal elements not found');
+                return;
+            }
+            
+            const closeReminderModal = document.getElementById('close-reminder-modal');
+
+            // Match data for reminders
+            const reminderMatchData = {
+                'melbourne-hobart': {
+                    matchNumber: '12th Match',
+                    title: 'Melbourne vs Hobart',
+                    team1: 'Melbourne',
+                    team2: 'Hobart',
+                    series: 'Big Bash League 2025-26',
+                    venue: 'Melbourne Cricket Ground',
+                    time: '15th Dec 2025, 2:00 PM',
+                    prediction1: 65,
+                    prediction2: 35
+                },
+                'sydney-brisbane-upcoming': {
+                    matchNumber: '15th Match',
+                    title: 'Sydney vs Brisbane',
+                    team1: 'Sydney',
+                    team2: 'Brisbane',
+                    series: 'Big Bash League 2025-26',
+                    venue: 'Sydney Cricket Ground',
+                    time: '16th Dec 2025, 5:30 PM',
+                    prediction1: 58,
+                    prediction2: 42
+                },
+                'singapore-thailand': {
+                    matchNumber: '8th Match',
+                    title: 'Singapore vs Thailand',
+                    team1: 'Singapore',
+                    team2: 'Thailand',
+                    series: 'ASEAN Cricket Championship 2025',
+                    venue: 'Singapore Cricket Club',
+                    time: '17th Dec 2025, 10:00 AM',
+                    prediction1: 72,
+                    prediction2: 28
+                }
+            };
+
+            // Open reminder modal
+            setReminderBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const matchId = this.dataset.match || 'melbourne-hobart';
+                    const match = reminderMatchData[matchId] || reminderMatchData['melbourne-hobart'];
+                    
+                    if (match) {
+                        // Update match info
+                        document.getElementById('reminder-match-number').textContent = match.matchNumber;
+                        document.getElementById('reminder-match-title').textContent = match.title;
+                        document.getElementById('reminder-match-series').textContent = match.series;
+                        document.getElementById('reminder-match-venue').textContent = match.venue;
+                        document.getElementById('reminder-match-time').textContent = match.time;
+                        
+                        // Update team names in prediction
+                        document.getElementById('prediction-team-1').textContent = match.team1;
+                        document.getElementById('prediction-team-2').textContent = match.team2;
+                        document.getElementById('prediction-label-1').textContent = match.team1.toUpperCase();
+                        document.getElementById('prediction-label-2').textContent = match.team2.toUpperCase();
+                        
+                        // Update predictions
+                        document.getElementById('prediction-percentage-1').textContent = match.prediction1 + '%';
+                        document.getElementById('prediction-percentage-2').textContent = match.prediction2 + '%';
+                        document.getElementById('prediction-bar-1').style.width = match.prediction1 + '%';
+                        document.getElementById('prediction-bar-2').style.width = match.prediction2 + '%';
+                    }
+                    
+                    if (reminderModal) {
+                        reminderModal.style.display = 'flex';
+                        reminderModal.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    }
+                });
+            });
+
+            // Close modal
+            function closeModal() {
+                if (reminderModal) {
+                    reminderModal.style.display = 'none';
+                    reminderModal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            }
+
+            if (closeReminderModal) {
+                closeReminderModal.addEventListener('click', closeModal);
+            }
+
+            // Close modal when clicking outside
+            reminderModal.addEventListener('click', function(e) {
+                if (e.target === reminderModal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

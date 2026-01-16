@@ -322,7 +322,7 @@ function initBillingToggle() {
 function updatePricesForMonthly() {
     const proPrice = document.querySelector('.plan-card.featured .price');
     if (proPrice) {
-        proPrice.innerHTML = '$14.99 <span>/ month</span>';
+        proPrice.innerHTML = '$9.99 <span>/ month</span>';
     }
 }
 
@@ -332,7 +332,7 @@ function updatePricesForMonthly() {
 function updatePricesForAnnual() {
     const proPrice = document.querySelector('.plan-card.featured .price');
     if (proPrice) {
-        const monthlyPrice = 14.99;
+        const monthlyPrice = 9.99;
         const annualPrice = (monthlyPrice * 12 * 0.8).toFixed(2);
         proPrice.innerHTML = '$' + annualPrice + ' <span>/ year</span>';
     }

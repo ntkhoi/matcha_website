@@ -240,7 +240,7 @@ function showSuccessMessage(form) {
                 <h2 style="color: #17c964; margin-bottom: 15px;">Thank You!</h2>
                 <p style="color: #ccc; font-size: 16px;">You've successfully joined the Matcha community.</p>
                 <p style="color: #999; font-size: 14px; margin-top: 10px;">We'll be in touch soon!</p>
-                <a href="index.html" style="display: inline-block; margin-top: 25px; padding: 12px 30px; background: #17c964; color: #000; text-decoration: none; border-radius: 25px; font-weight: 600;">Back to Home</a>
+                <a href="/" style="display: inline-block; margin-top: 25px; padding: 12px 30px; background: #17c964; color: #000; text-decoration: none; border-radius: 25px; font-weight: 600;">Back to Home</a>
             </div>
         `;
     }
